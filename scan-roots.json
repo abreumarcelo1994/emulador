@@ -1,0 +1,20 @@
+{
+  "roots": [
+    {
+      "path": "./library",
+      "label": "Biblioteca de Jogos PS2"
+    },
+    {
+      "path": "./pc-games",
+      "label": "Jogos Nativos de PC (60 FPS)"
+    },
+    {
+      "path": "C:\\Users\\Win\\Desktop",
+      "label": "Área de Trabalho"
+    },
+    {
+      "path": "C:\\Users\\Win\\Downloads",
+      "label": "Downloads"
+    }
+  ]
+}

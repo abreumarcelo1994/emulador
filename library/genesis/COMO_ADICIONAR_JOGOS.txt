@@ -1,0 +1,6 @@
+COLOQUE AQUI SUAS ROMS DE SEGA MEGA DRIVE / GENESIS
+===================================================
+Formatos aceitos: .md, .bin, .gen, .smd
+Emulador Acelerador Integrado: BlastEm
+Desempenho: 60 FPS com aceleracao nativa de hardware.
+Basta colocar seus jogos aqui e abrir a central em http://127.0.0.1:8620!

@@ -1,0 +1,853 @@
+{
+  "games": [
+    {
+      "serial": "UCUS-98737",
+      "aliases": [
+        "UCUS_987.37",
+        "ULES-01473",
+        "ULES_014.73"
+      ],
+      "title": "God of War: Ghost of Sparta",
+      "cleanTitle": "God of War Ghost of Sparta",
+      "genre": "Ação / Hack and Slash",
+      "year": 2010,
+      "developer": "Ready at Dawn / Santa Monica Studio",
+      "players": "1 Jogador",
+      "requirementTier": "Médio (60 FPS)",
+      "requirementDescription": "Clássico absoluto do PSP rodando em resolução HD/4K com Direct3D 11 ou Vulkan a 60 FPS cravados no PPSSPP.",
+      "coverUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_Portable/master/Named_Boxarts/God%20of%20War%20-%20Ghost%20of%20Sparta%20(USA)%20(En%2CFr%2CEs).png",
+      "cheats": {
+        "widescreen": "Nativo 16:9",
+        "fps60": "Nativo 60 FPS no PPSSPP",
+        "codes": [
+          {
+            "name": "Vida Infinita (Kratos)",
+            "code": "_C1 Infinite Health\\n_L 0x2035F500 0x42C80000"
+          },
+          {
+            "name": "Magia Infinita",
+            "code": "_C1 Infinite Magic\\n_L 0x2035F504 0x42C80000"
+          },
+          {
+            "name": "Red Orbs Máximos",
+            "code": "_C1 Max Red Orbs\\n_L 0x2035F50C 0x000F423F"
+          }
+        ]
+      },
+      "isPs2Exclusive": false,
+      "exclusiveRunnerTip": "Executado nativamente através do Acelerador PPSSPP com shaders de alta fidelidade e até 60 FPS."
+    },
+    {
+      "serial": "SLUS-21678",
+      "aliases": [
+        "SLUS_216.78",
+        "SLES-53544",
+        "SLES_535.44"
+      ],
+      "title": "Dragon Ball Z: Budokai Tenkaichi 3",
+      "cleanTitle": "Dragon Ball Z Budokai Tenkaichi 3",
+      "genre": "Luta / Ação 3D",
+      "year": 2007,
+      "developer": "Spike / Bandai Namco",
+      "players": "1 - 2 Jogadores",
+      "requirementTier": "Médio",
+      "requirementDescription": "Roda super bem em WebAssembly. Em PCs fracos (Dual-Core / Intel HD), ative o 'Modo PC Fraco' (Frame Skip 1 e resolução 0.75x) para 60 FPS cravados.",
+      "coverUrl": "https://raw.githubusercontent.com/xlenore/ps2-covers/main/covers/default/SLUS-21678.jpg",
+      "cheats": {
+        "widescreen": "patch=1,EE,00326A18,word,3F400000 // 16:9 Widescreen Fix",
+        "fps60": "patch=1,EE,00301140,word,00000000 // Destravar 60 FPS",
+        "pnach": "gametitle=Dragon Ball Z - Budokai Tenkaichi 3 (USA)\ncomment=Cheats Essenciais\n// 16:9 Widescreen\npatch=1,EE,00326A18,word,3F400000\n// Vida Infinita P1\npatch=1,EE,208942A0,word,461C4000\n// Ki Infinito P1\npatch=1,EE,208942B0,word,461C4000\n// Destravar Todos os Personagens\npatch=1,EE,20689400,word,FFFFFFFF\n// Destravar Todas as Roupas e Fases\npatch=1,EE,20689404,word,FFFFFFFF\n",
+        "codes": [
+          {
+            "name": "Vida Infinita (P1)",
+            "code": "208942A0 461C4000"
+          },
+          {
+            "name": "Ki / Energia Máxima (P1)",
+            "code": "208942B0 461C4000"
+          },
+          {
+            "name": "Destravar Todos os Personagens",
+            "code": "20689400 FFFFFFFF"
+          },
+          {
+            "name": "Destravar Todas as Fases & Modos",
+            "code": "20689404 FFFFFFFF"
+          },
+          {
+            "name": "Z-Points Máximos (Dinheiro)",
+            "code": "20689410 05F5E0FF"
+          }
+        ]
+      },
+      "isPs2Exclusive": true,
+      "exclusiveRunnerTip": "Jogo 100% exclusivo de console. Para obter ate 60 FPS no seu hardware, utilize o Acelerador Desktop com Direct3D."
+    },
+    {
+      "serial": "SLUS-20946",
+      "aliases": [
+        "SLUS_209.46",
+        "SLES-52541"
+      ],
+      "title": "Grand Theft Auto: San Andreas",
+      "cleanTitle": "Grand Theft Auto San Andreas",
+      "genre": "Mundo Aberto / Ação",
+      "year": 2004,
+      "developer": "Rockstar North",
+      "players": "1 - 2 Jogadores",
+      "requirementTier": "Médio",
+      "requirementDescription": "Jogo amplo com grande mapa. Em computadores fracos, mantenha a resolução em 1x ou 0.75x para garantir fluidez constante em áreas com muitos carros.",
+      "coverUrl": "https://raw.githubusercontent.com/xlenore/ps2-covers/main/covers/default/SLUS-20946.jpg",
+      "cheats": {
+        "widescreen": "patch=1,EE,002B4380,word,3F400000 // 16:9 Widescreen",
+        "fps60": "patch=1,EE,00224420,word,00000000 // 60 FPS",
+        "pnach": "gametitle=Grand Theft Auto - San Andreas (USA)\ncomment=Cheats Essenciais\n// 16:9 Widescreen\npatch=1,EE,002B4380,word,3F400000\n// Vida e Colete Infinitos + $250.000\npatch=1,EE,20268574,word,0003D090\n// Munição Infinita\npatch=1,EE,202456C8,word,24020001\n// Nível de Procurado Nunca Aumenta\npatch=1,EE,20269414,word,00000000\n",
+        "codes": [
+          {
+            "name": "Vida e Colete Infinito + $250k",
+            "code": "20268574 0003D090"
+          },
+          {
+            "name": "Munição Infinita",
+            "code": "202456C8 24020001"
+          },
+          {
+            "name": "Nunca Procurado pela Polícia",
+            "code": "20269414 00000000"
+          },
+          {
+            "name": "CJ Super Salto & Corrida Infinita",
+            "code": "2026A100 42C80000"
+          }
+        ]
+      },
+      "hasPcVersion": true,
+      "pcVersionDetails": {
+        "title": "Grand Theft Auto: San Andreas (Edição PC Nativa • 60 FPS)",
+        "exeName": "gta_sa.exe",
+        "whyBetter": "Roda nativo no Windows a 60 FPS sem sobrecarga do emulador. Suporta mods e texturas HD.",
+        "sourceUrl": "https://archive.org/details/gta-sa-pc"
+      }
+    },
+    {
+      "serial": "SLUS-21115",
+      "aliases": [
+        "SLUS_211.15",
+        "SLES-53702"
+      ],
+      "title": "Resident Evil 4",
+      "cleanTitle": "Resident Evil 4",
+      "genre": "Terror / Sobrevivência / Tiro",
+      "year": 2005,
+      "developer": "Capcom",
+      "players": "1 Jogador",
+      "requirementTier": "Médio",
+      "requirementDescription": "Excelente otimização no motor do emulador. Gráficos suaves e alta compatibilidade em praticamente qualquer PC.",
+      "coverUrl": "https://raw.githubusercontent.com/xlenore/ps2-covers/main/covers/default/SLUS-21115.jpg",
+      "cheats": {
+        "widescreen": "patch=1,EE,001B6B20,word,3F400000 // 16:9 Widescreen",
+        "fps60": "patch=1,EE,00185124,word,00000000 // 60 FPS Unlock",
+        "pnach": "gametitle=Resident Evil 4 (USA)\ncomment=Cheats Essenciais\n// 16:9 Widescreen\npatch=1,EE,001B6B20,word,3F400000\n// Vida Infinita Leon\npatch=1,EE,203F01C4,word,000003E8\n// Munição Infinita sem Recarregar\npatch=1,EE,2017D164,word,00000000\n// Pesetas Infinitas (99.999.999)\npatch=1,EE,203F01EC,word,05F5E0FF\n",
+        "codes": [
+          {
+            "name": "Vida Infinita Leon",
+            "code": "203F01C4 000003E8"
+          },
+          {
+            "name": "Munição Infinita (Sem Recarga)",
+            "code": "2017D164 00000000"
+          },
+          {
+            "name": "Pesetas Máximas (Dinheiro)",
+            "code": "203F01EC 05F5E0FF"
+          }
+        ]
+      },
+      "hasPcVersion": true,
+      "pcVersionDetails": {
+        "title": "Resident Evil 4 (Edição PC Clássica • 60 FPS)",
+        "exeName": "game.exe",
+        "whyBetter": "Roda liso e suave na Intel HD 3000 sem sobrecarregar a CPU.",
+        "sourceUrl": "https://www.myabandonware.com/game/resident-evil-4-43q"
+      }
+    },
+    {
+      "serial": "SCUS-97399",
+      "aliases": [
+        "SCUS_973.99",
+        "SCES-53133"
+      ],
+      "title": "God of War",
+      "cleanTitle": "God of War",
+      "genre": "Ação / Hack and Slash",
+      "year": 2005,
+      "developer": "Santa Monica Studio",
+      "players": "1 Jogador",
+      "requirementTier": "Médio",
+      "requirementDescription": "Cenas épicas com muitos efeitos alfa. Recomenda-se perfil Equilibrado; em notebooks fracos, use Modo PC Fraco com Frame Skip 1.",
+      "coverUrl": "https://raw.githubusercontent.com/xlenore/ps2-covers/main/covers/default/SCUS-97399.jpg",
+      "cheats": {
+        "widescreen": "patch=1,EE,001DA0F0,word,3F400000 // 16:9 Widescreen",
+        "fps60": "patch=1,EE,001CD120,word,00000000 // 60 FPS",
+        "pnach": "gametitle=God of War (USA)\ncomment=Cheats Essenciais\n// Vida Infinita Kratos\npatch=1,EE,2024E058,word,42C80000\n// Magia Infinita\npatch=1,EE,2024E05C,word,42C80000\n// Red Orbs Infinitos\npatch=1,EE,2024E064,word,000F423F\n",
+        "codes": [
+          {
+            "name": "Vida Infinita (Kratos)",
+            "code": "2024E058 42C80000"
+          },
+          {
+            "name": "Magia Infinita",
+            "code": "2024E05C 42C80000"
+          },
+          {
+            "name": "Red Orbs Máximos (Upgrades)",
+            "code": "2024E064 000F423F"
+          }
+        ]
+      },
+      "isPs2Exclusive": true,
+      "exclusiveRunnerTip": "Jogo 100% exclusivo de console. Para obter ate 60 FPS no seu hardware, utilize o Acelerador Desktop com Direct3D."
+    },
+    {
+      "serial": "SCUS-97481",
+      "aliases": [
+        "SCUS_974.81",
+        "SCES-54206"
+      ],
+      "title": "God of War II",
+      "cleanTitle": "God of War II",
+      "genre": "Ação / Hack and Slash",
+      "year": 2007,
+      "developer": "Santa Monica Studio",
+      "players": "1 Jogador",
+      "requirementTier": "Pesado",
+      "requirementDescription": "Um dos jogos mais pesados do PS2. Exige 'Modo PC Fraco' ativado (Frame Skip 1 e resolução nativa 0.75x) para rodar liso em computadores sem placa de vídeo dedicada.",
+      "coverUrl": "https://raw.githubusercontent.com/xlenore/ps2-covers/main/covers/default/SCUS-97481.jpg",
+      "cheats": {
+        "widescreen": "patch=1,EE,0021A5C0,word,3F400000 // 16:9 Widescreen",
+        "fps60": "patch=1,EE,0020B110,word,00000000 // 60 FPS",
+        "pnach": "gametitle=God of War II (USA)\ncomment=Cheats Essenciais\n// Vida Infinita Kratos\npatch=1,EE,20237E40,word,42C80000\n// Magia Infinita\npatch=1,EE,20237E44,word,42C80000\n// Red Orbs Máximos\npatch=1,EE,20237E4C,word,000F423F\n",
+        "codes": [
+          {
+            "name": "Vida Infinita",
+            "code": "20237E40 42C80000"
+          },
+          {
+            "name": "Magia Infinita",
+            "code": "20237E44 42C80000"
+          },
+          {
+            "name": "Red Orbs Máximos",
+            "code": "20237E4C 000F423F"
+          }
+        ]
+      },
+      "isPs2Exclusive": true,
+      "exclusiveRunnerTip": "Jogo 100% exclusivo de console. Para obter ate 60 FPS no seu hardware, utilize o Acelerador Desktop com Direct3D."
+    },
+    {
+      "serial": "SLUS-21258",
+      "aliases": [
+        "SLUS_212.58",
+        "SLES-53558"
+      ],
+      "title": "Need for Speed: Most Wanted",
+      "cleanTitle": "Need for Speed Most Wanted",
+      "genre": "Corrida / Mundo Aberto",
+      "year": 2005,
+      "developer": "EA Black Box",
+      "players": "1 - 2 Jogadores",
+      "requirementTier": "Médio",
+      "requirementDescription": "Mundo aberto dinâmico e perseguições policiais. Ótimo desempenho com resolução 1x e aceleração gráfica WebGL.",
+      "coverUrl": "https://raw.githubusercontent.com/xlenore/ps2-covers/main/covers/default/SLUS-21258.jpg",
+      "cheats": {
+        "widescreen": "patch=1,EE,002829F8,word,3F400000 // 16:9 Widescreen",
+        "fps60": "patch=1,EE,00234120,word,00000000 // 60 FPS",
+        "pnach": "gametitle=Need for Speed - Most Wanted (USA)\ncomment=Cheats Essenciais\n// Nitro Infinito\npatch=1,EE,20468AB0,word,42C80000\n// Speedbreaker Infinito\npatch=1,EE,20468AC4,word,42C80000\n// Dinheiro Máximo no Carreira\npatch=1,EE,2047A5F4,word,05F5E0FF\n",
+        "codes": [
+          {
+            "name": "Nitro Infinito",
+            "code": "20468AB0 42C80000"
+          },
+          {
+            "name": "Speedbreaker Infinito",
+            "code": "20468AC4 42C80000"
+          },
+          {
+            "name": "Dinheiro Infinito ($99.999.999)",
+            "code": "2047A5F4 05F5E0FF"
+          }
+        ]
+      },
+      "hasPcVersion": true,
+      "pcVersionDetails": {
+        "title": "Need for Speed: Most Wanted (Edição PC Nativa • 60 FPS)",
+        "exeName": "speed.exe",
+        "whyBetter": "Perseguicoes policiais e mundo aberto a 60 FPS lisos no Windows.",
+        "sourceUrl": "https://www.myabandonware.com/game/need-for-speed-most-wanted-bci"
+      }
+    },
+    {
+      "serial": "SLUS-21065",
+      "aliases": [
+        "SLUS_210.65",
+        "SLES-52725",
+        "SLES_527.25"
+      ],
+      "title": "Need for Speed: Underground 2",
+      "cleanTitle": "Need for Speed Underground 2",
+      "genre": "Corrida / Tunning",
+      "year": 2004,
+      "developer": "EA Black Box",
+      "players": "1 - 2 Jogadores",
+      "requirementTier": "Leve",
+      "requirementDescription": "Versão americana completa (NTSC-U). Roda com alta taxa de quadros e estabilidade em praticamente qualquer computador.",
+      "coverUrl": "https://raw.githubusercontent.com/xlenore/ps2-covers/main/covers/default/SLUS-21065.jpg",
+      "cheats": {
+        "widescreen": "patch=1,EE,0056FB44,word,3F5B8D14 // 16:9 Widescreen Nativo\npatch=1,EE,0056FBF4,word,3F154000\npatch=1,EE,001CCAF4,word,0C0ED18B",
+        "fps60": "patch=1,EE,0021A520,word,00000000 // 60 FPS",
+        "pnach": "gametitle=Need for Speed: Underground 2 (USA) [SLUS-21065]\ncomment=Cheats Essenciais e Widescreen 16:9\n// Widescreen 16:9\npatch=1,EE,0056FB44,word,3F5B8D14\npatch=1,EE,0056FBF4,word,3F154000\npatch=1,EE,001CCAF4,word,0C0ED18B\n// Nitro Infinito\npatch=1,EE,204B1030,word,42C80000\n// Dinheiro Máximo no Carreira ($99.999.999)\npatch=1,EE,204C3E90,word,05F5E0FF\n// Destravar Peças de Performance Nível 3\npatch=1,EE,204C3E94,word,FFFFFFFF\n",
+        "codes": [
+          {
+            "name": "Nitro Infinito",
+            "code": "204B1030 42C80000"
+          },
+          {
+            "name": "Dinheiro Máximo no Carreira ($99.999.999)",
+            "code": "204C3E90 05F5E0FF"
+          },
+          {
+            "name": "Destravar Todas as Peças de Performance",
+            "code": "204C3E94 FFFFFFFF"
+          },
+          {
+            "name": "[Código Tela Inicial] Todas as Pistas de Circuito",
+            "code": "BAIXO, R1, R1, R1, R2, R2, R2, QUADRADO"
+          },
+          {
+            "name": "[Código Tela Inicial] Nissan Skyline & RX-8 no Quick Race",
+            "code": "ESQUERDA, ESQUERDA, DIREITA, QUADRADO, QUADRADO, DIREITA, L1, R1"
+          },
+          {
+            "name": "[Código Tela Inicial] Peças de Performance Nível 2",
+            "code": "R1, R1, L1, R1, ESQUERDA, DIREITA, CIMA, BAIXO"
+          },
+          {
+            "name": "[Código Tela Inicial] Peças Visuais Nível 2",
+            "code": "L1, R1, CIMA, BAIXO, L1, CIMA, CIMA, BAIXO"
+          }
+        ]
+      },
+      "hasPcVersion": true,
+      "pcVersionDetails": {
+        "title": "Need for Speed: Underground 2 (Edição PC Nativa • 60 FPS)",
+        "exeName": "SPEED2.EXE",
+        "whyBetter": "Roda a 60 FPS cravados no seu hardware (Intel HD 3000 + i7) com graficos no maximo e sem travar o audio.",
+        "sourceUrl": "https://www.myabandonware.com/game/need-for-speed-underground-2-ega",
+        "widescreenFixUrl": "https://github.com/ThirteenAG/WidescreenFixesPack/releases/tag/nfsu2"
+      }
+    },
+    {
+      "serial": "SLUS-20927",
+      "aliases": [
+        "SLUS_209.27",
+        "SLES-52599"
+      ],
+      "title": "Def Jam: Fight for NY",
+      "cleanTitle": "Def Jam Fight for NY",
+      "genre": "Luta / Ação",
+      "year": 2004,
+      "developer": "AKI Corporation / EA",
+      "players": "1 - 4 Jogadores",
+      "requirementTier": "Leve",
+      "requirementDescription": "Motor AKI altamente otimizado. Roda a 60 FPS liso em praticamente qualquer computador fraco ou notebook.",
+      "coverUrl": "https://raw.githubusercontent.com/xlenore/ps2-covers/main/covers/default/SLUS-20927.jpg",
+      "cheats": {
+        "widescreen": "patch=1,EE,0028A1C0,word,3F400000 // 16:9 Widescreen",
+        "fps60": "patch=1,EE,0025D230,word,00000000 // 60 FPS",
+        "pnach": "gametitle=Def Jam - Fight for NY (USA)\ncomment=Cheats Essenciais\n// Vida Infinita P1\npatch=1,EE,203F89A0,word,42C80000\n// Blazin Meter Sempre Cheio P1\npatch=1,EE,203F89B8,word,42C80000\n// Destravar Todos os Lutadores\npatch=1,EE,20412350,word,FFFFFFFF\n",
+        "codes": [
+          {
+            "name": "Vida Infinita (P1)",
+            "code": "203F89A0 42C80000"
+          },
+          {
+            "name": "Blazin Meter Sempre Cheio (P1)",
+            "code": "203F89B8 42C80000"
+          },
+          {
+            "name": "Destravar Todos os Lutadores & Arenas",
+            "code": "20412350 FFFFFFFF"
+          }
+        ]
+      },
+      "isPs2Exclusive": true,
+      "exclusiveRunnerTip": "Jogo 100% exclusivo de console. Para obter ate 60 FPS no seu hardware, utilize o Acelerador Desktop com Direct3D."
+    },
+    {
+      "serial": "SCUS-97472",
+      "aliases": [
+        "SCUS_974.72",
+        "SCES-53326"
+      ],
+      "title": "Shadow of the Colossus",
+      "cleanTitle": "Shadow of the Colossus",
+      "genre": "Aventura / Épico",
+      "year": 2005,
+      "developer": "Team Ico / SCE Japan",
+      "players": "1 Jogador",
+      "requirementTier": "Pesado",
+      "requirementDescription": "O jogo que levava o hardware do PS2 ao limite absoluto com iluminação HDR dinâmica. Para computadores modestos, o 'Modo PC Fraco' com Frame Skip 1 e resolução 0.75x é fundamental.",
+      "coverUrl": "https://raw.githubusercontent.com/xlenore/ps2-covers/main/covers/default/SCUS-97472.jpg",
+      "cheats": {
+        "widescreen": "patch=1,EE,00244710,word,3F400000 // 16:9 Widescreen",
+        "fps60": "patch=1,EE,001B9520,word,00000000 // 60 FPS Unlock",
+        "pnach": "gametitle=Shadow of the Colossus (USA)\ncomment=Cheats Essenciais\n// Vida Infinita Wander\npatch=1,EE,2022C430,word,43480000\n// Grip / Estamina Infinita\npatch=1,EE,2022C438,word,43480000\n",
+        "codes": [
+          {
+            "name": "Vida Infinita (Wander)",
+            "code": "2022C430 43480000"
+          },
+          {
+            "name": "Grip / Estamina Infinita",
+            "code": "2022C438 43480000"
+          }
+        ]
+      },
+      "isPs2Exclusive": true,
+      "exclusiveRunnerTip": "Jogo 100% exclusivo de console. Para obter ate 60 FPS no seu hardware, utilize o Acelerador Desktop com Direct3D."
+    },
+    {
+      "serial": "SLUS-21002",
+      "aliases": [
+        "SLUS_210.02",
+        "SLES-53202"
+      ],
+      "title": "Tekken 5",
+      "cleanTitle": "Tekken 5",
+      "genre": "Luta 3D",
+      "year": 2005,
+      "developer": "Namco",
+      "players": "1 - 2 Jogadores",
+      "requirementTier": "Médio",
+      "requirementDescription": "Excelente motor de 60 quadros por segundo. Mantém 60 FPS estáveis mesmo em CPUs dual-core.",
+      "coverUrl": "https://raw.githubusercontent.com/xlenore/ps2-covers/main/covers/default/SLUS-21002.jpg",
+      "cheats": {
+        "widescreen": "patch=1,EE,002DA190,word,3F400000 // 16:9 Widescreen",
+        "fps60": "patch=1,EE,00210010,word,00000000 // 60 FPS",
+        "pnach": "gametitle=Tekken 5 (USA)\ncomment=Cheats Essenciais\n// Vida Infinita P1\npatch=1,EE,20466184,word,000000B4\n// Destravar Todos os Personagens\npatch=1,EE,204598F8,word,FFFFFFFF\n",
+        "codes": [
+          {
+            "name": "Vida Infinita (P1)",
+            "code": "20466184 000000B4"
+          },
+          {
+            "name": "Destravar Todos os Personagens & Roupas",
+            "code": "204598F8 FFFFFFFF"
+          },
+          {
+            "name": "Dinheiro Máximo Fight Money",
+            "code": "20459904 05F5E0FF"
+          }
+        ]
+      },
+      "isPs2Exclusive": true,
+      "exclusiveRunnerTip": "Jogo 100% exclusivo de console. Para obter ate 60 FPS no seu hardware, utilize o Acelerador Desktop com Direct3D."
+    },
+    {
+      "serial": "SLUS-20312",
+      "aliases": [
+        "SLUS_203.12",
+        "SLES-50490"
+      ],
+      "title": "Final Fantasy X",
+      "cleanTitle": "Final Fantasy X",
+      "genre": "RPG por Turnos",
+      "year": 2001,
+      "developer": "Square",
+      "players": "1 Jogador",
+      "requirementTier": "Leve",
+      "requirementDescription": "Combates por turnos não exigem reflexos imediatos e o motor é leve. Perfeito para qualquer PC fraco ou notebook básico.",
+      "coverUrl": "https://raw.githubusercontent.com/xlenore/ps2-covers/main/covers/default/SLUS-20312.jpg",
+      "cheats": {
+        "widescreen": "patch=1,EE,00282120,word,3F400000 // 16:9 Widescreen",
+        "fps60": "patch=1,EE,00184420,word,00000000 // 60 FPS",
+        "pnach": "gametitle=Final Fantasy X (USA)\ncomment=Cheats Essenciais\n// Gil Máximo (Dinheiro)\npatch=1,EE,2031D3AC,word,05F5E0FF\n// HP Infinito Tidus\npatch=1,EE,1031D450,word,0000270F\n// MP Infinito Tidus\npatch=1,EE,1031D454,word,000003E7\n",
+        "codes": [
+          {
+            "name": "Gil Máximo (99.999.999)",
+            "code": "2031D3AC 05F5E0FF"
+          },
+          {
+            "name": "HP Infinito (Tidus)",
+            "code": "1031D450 0000270F"
+          },
+          {
+            "name": "MP Infinito (Tidus)",
+            "code": "1031D454 000003E7"
+          }
+        ]
+      }
+    },
+    {
+      "serial": "SLUS-21376",
+      "aliases": [
+        "SLUS_213.76",
+        "SLES-53886"
+      ],
+      "title": "Black",
+      "cleanTitle": "Black",
+      "genre": "Tiro em Primeira Pessoa (FPS)",
+      "year": 2006,
+      "developer": "Criterion Games / EA",
+      "players": "1 Jogador",
+      "requirementTier": "Pesado",
+      "requirementDescription": "Destruição pesada de cenário e efeitos de fumaça volumétrica. Recomenda-se ativar 'Modo PC Fraco' (Frame Skip 1) em notebooks com placa integrada.",
+      "coverUrl": "https://raw.githubusercontent.com/xlenore/ps2-covers/main/covers/default/SLUS-21376.jpg",
+      "cheats": {
+        "widescreen": "patch=1,EE,0025A1A0,word,3F400000 // 16:9 Widescreen",
+        "fps60": "patch=1,EE,001FD320,word,00000000 // 60 FPS",
+        "pnach": "gametitle=Black (USA)\ncomment=Cheats Essenciais\n// Vida Infinita\npatch=1,EE,203F8090,word,42C80000\n// Munição Infinita\npatch=1,EE,203F80A4,word,000003E7\n",
+        "codes": [
+          {
+            "name": "Vida Infinita",
+            "code": "203F8090 42C80000"
+          },
+          {
+            "name": "Munição Infinita",
+            "code": "203F80A4 000003E7"
+          }
+        ]
+      },
+      "isPs2Exclusive": true,
+      "exclusiveRunnerTip": "Jogo 100% exclusivo de console. Para obter ate 60 FPS no seu hardware, utilize o Acelerador Desktop com Direct3D."
+    },
+    {
+      "serial": "SLUS-21287",
+      "aliases": [
+        "SLUS_212.87",
+        "SLES-53393"
+      ],
+      "title": "Dragon Ball Z: Budokai Tenkaichi 2",
+      "cleanTitle": "Dragon Ball Z Budokai Tenkaichi 2",
+      "genre": "Luta 3D",
+      "year": 2006,
+      "developer": "Spike / Bandai Namco",
+      "players": "1 - 2 Jogadores",
+      "requirementTier": "Médio",
+      "requirementDescription": "Excelente desempenho no navegador, compatibilidade alta e arenas épicas.",
+      "coverUrl": "https://raw.githubusercontent.com/xlenore/ps2-covers/main/covers/default/SLUS-21287.jpg",
+      "cheats": {
+        "widescreen": "patch=1,EE,002BA310,word,3F400000 // 16:9 Widescreen",
+        "fps60": "patch=1,EE,00201100,word,00000000 // 60 FPS",
+        "pnach": "gametitle=Dragon Ball Z - Budokai Tenkaichi 2 (USA)\ncomment=Cheats Essenciais\n// Vida Infinita P1\npatch=1,EE,207B1240,word,461C4000\n// Ki Infinito P1\npatch=1,EE,207B1250,word,461C4000\n",
+        "codes": [
+          {
+            "name": "Vida Infinita (P1)",
+            "code": "207B1240 461C4000"
+          },
+          {
+            "name": "Ki Infinito (P1)",
+            "code": "207B1250 461C4000"
+          }
+        ]
+      },
+      "isPs2Exclusive": true,
+      "exclusiveRunnerTip": "Jogo 100% exclusivo de console. Para obter ate 60 FPS no seu hardware, utilize o Acelerador Desktop com Direct3D."
+    },
+    {
+      "serial": "SLUS-21087",
+      "aliases": [
+        "SLUS_210.87",
+        "SLES-53140"
+      ],
+      "title": "Mortal Kombat: Shaolin Monks",
+      "cleanTitle": "Mortal Kombat Shaolin Monks",
+      "genre": "Ação / Beat 'em up",
+      "year": 2005,
+      "developer": "Midway Games",
+      "players": "1 - 2 Jogadores",
+      "requirementTier": "Leve",
+      "requirementDescription": "Excelente para jogar em cooperativo para 2 pessoas. Roda liso a 60 FPS.",
+      "coverUrl": "https://raw.githubusercontent.com/xlenore/ps2-covers/main/covers/default/SLUS-21087.jpg",
+      "cheats": {
+        "widescreen": "patch=1,EE,002A1910,word,3F400000 // 16:9 Widescreen",
+        "fps60": "patch=1,EE,0021A110,word,00000000 // 60 FPS",
+        "pnach": "gametitle=Mortal Kombat - Shaolin Monks (USA)\ncomment=Cheats Essenciais\n// Vida Infinita Liu Kang / Kung Lao\npatch=1,EE,204689E0,word,43480000\n// Experiência Máxima\npatch=1,EE,20468A00,word,000F423F\n",
+        "codes": [
+          {
+            "name": "Vida Infinita P1",
+            "code": "204689E0 43480000"
+          },
+          {
+            "name": "Experiência Máxima (Upgrades)",
+            "code": "20468A00 000F423F"
+          },
+          {
+            "name": "Destravar Scorpion & Sub-Zero",
+            "code": "20469120 FFFFFFFF"
+          }
+        ]
+      },
+      "isPs2Exclusive": true,
+      "exclusiveRunnerTip": "Jogo 100% exclusivo de console. Para obter ate 60 FPS no seu hardware, utilize o Acelerador Desktop com Direct3D."
+    },
+    {
+      "serial": "SLUS-21361",
+      "aliases": [
+        "SLUS_213.61",
+        "SLES-54203"
+      ],
+      "title": "Bully",
+      "cleanTitle": "Bully Canis Canem Edit",
+      "genre": "Aventura / Mundo Aberto",
+      "year": 2006,
+      "developer": "Rockstar Vancouver",
+      "players": "1 Jogador",
+      "requirementTier": "Médio",
+      "requirementDescription": "Física ativa e personagens animados. Ótima performance com perfil Equilibrado.",
+      "coverUrl": "https://raw.githubusercontent.com/xlenore/ps2-covers/main/covers/default/SLUS-21361.jpg",
+      "cheats": {
+        "widescreen": "patch=1,EE,0026C110,word,3F400000 // 16:9 Widescreen",
+        "fps60": "patch=1,EE,00218820,word,00000000 // 60 FPS",
+        "pnach": "gametitle=Bully (USA)\ncomment=Cheats Essenciais\n// Vida Infinita Jimmy\npatch=1,EE,203F8900,word,42C80000\n// Dinheiro Máximo\npatch=1,EE,203F8914,word,05F5E0FF\n",
+        "codes": [
+          {
+            "name": "Vida Infinita",
+            "code": "203F8900 42C80000"
+          },
+          {
+            "name": "Dinheiro Máximo",
+            "code": "203F8914 05F5E0FF"
+          }
+        ]
+      },
+      "hasPcVersion": true,
+      "pcVersionDetails": {
+        "title": "Bully: Scholarship Edition (Edição PC Nativa • 60 FPS)",
+        "exeName": "Bully.exe",
+        "whyBetter": "Inclui novas aulas, missoes extras e resolucao nativa sem emulacao.",
+        "sourceUrl": "https://archive.org/details/bully-pc-se"
+      }
+    },
+    {
+      "serial": "SLUS-20002",
+      "aliases": [
+        "SLUS_200.02",
+        "SCES-50294"
+      ],
+      "title": "Gran Turismo 3: A-Spec",
+      "cleanTitle": "Gran Turismo 3 A Spec",
+      "genre": "Simulação de Corrida",
+      "year": 2001,
+      "developer": "Polyphony Digital",
+      "players": "1 - 2 Jogadores",
+      "requirementTier": "Médio",
+      "requirementDescription": "Física precisa de pneus e pistas detalhadas. Roda com 60 FPS estáveis com gráficos 1x.",
+      "coverUrl": "https://raw.githubusercontent.com/xlenore/ps2-covers/main/covers/default/SLUS-20002.jpg",
+      "cheats": {
+        "widescreen": "patch=1,EE,0021A580,word,3F400000 // 16:9 Widescreen",
+        "fps60": "patch=1,EE,001A4510,word,00000000 // 60 FPS",
+        "pnach": "gametitle=Gran Turismo 3 - A-Spec (USA)\ncomment=Cheats Essenciais\n// Créditos Máximos Cr.\npatch=1,EE,203FA890,word,3B9AC9FF\n",
+        "codes": [
+          {
+            "name": "Créditos Máximos (Dinheiro Cr.)",
+            "code": "203FA890 3B9AC9FF"
+          }
+        ]
+      }
+    },
+    {
+      "serial": "SLUS-20672",
+      "aliases": [
+        "SLUS_206.72",
+        "SLES-52467"
+      ],
+      "title": "Crash Twinsanity",
+      "cleanTitle": "Crash Twinsanity",
+      "genre": "Plataforma 3D",
+      "year": 2004,
+      "developer": "Traveller's Tales",
+      "players": "1 Jogador",
+      "requirementTier": "Leve",
+      "requirementDescription": "Mundo de desenho animado colorido e leve. Roda fluido em qualquer PC fraco.",
+      "coverUrl": "https://raw.githubusercontent.com/xlenore/ps2-covers/main/covers/default/SLUS-20672.jpg",
+      "cheats": {
+        "widescreen": "patch=1,EE,0028A110,word,3F400000 // 16:9 Widescreen",
+        "fps60": "patch=1,EE,001F0020,word,00000000 // 60 FPS",
+        "pnach": "gametitle=Crash Twinsanity (USA)\ncomment=Cheats Essenciais\n// Vidas Infinitas (99)\npatch=1,EE,2031B000,word,00000063\n// Frutas Wumpa Máximas\npatch=1,EE,2031B004,word,00000063\n",
+        "codes": [
+          {
+            "name": "Vidas Infinitas (99)",
+            "code": "2031B000 00000063"
+          },
+          {
+            "name": "Frutas Wumpa Máximas",
+            "code": "2031B004 00000063"
+          }
+        ]
+      }
+    },
+    {
+      "serial": "SLUS-20565",
+      "aliases": [
+        "SLUS_205.65",
+        "SLES-51156"
+      ],
+      "title": "Dragon Ball Z: Budokai",
+      "cleanTitle": "Dragon Ball Z Budokai",
+      "genre": "Luta 3D",
+      "year": 2002,
+      "developer": "Dimps",
+      "players": "1 - 2 Jogadores",
+      "requirementTier": "Leve",
+      "requirementDescription": "Jogo leve e clássico. Roda com facilidade a 60 FPS em qualquer computador modesto.",
+      "coverUrl": "https://raw.githubusercontent.com/xlenore/ps2-covers/main/covers/default/SLUS-20565.jpg",
+      "cheats": {
+        "widescreen": "patch=1,EE,002231A0,word,3F400000 // 16:9 Widescreen",
+        "fps60": "patch=1,EE,00194410,word,00000000 // 60 FPS",
+        "pnach": "gametitle=Dragon Ball Z - Budokai (USA)\ncomment=Cheats Essenciais\n// Vida Infinita P1\npatch=1,EE,204689A0,word,461C4000\n",
+        "codes": [
+          {
+            "name": "Vida Infinita P1",
+            "code": "204689A0 461C4000"
+          }
+        ]
+      }
+    },
+    {
+      "serial": "SLUS-20014",
+      "aliases": [
+        "SLUS_200.14",
+        "SLES-50074"
+      ],
+      "title": "Tekken Tag Tournament",
+      "cleanTitle": "Tekken Tag Tournament",
+      "genre": "Luta 3D",
+      "year": 2000,
+      "developer": "Namco",
+      "players": "1 - 4 Jogadores",
+      "requirementTier": "Leve",
+      "requirementDescription": "Título de lançamento do PS2. Extremamente leve e roda a 60 FPS cravados em qualquer equipamento.",
+      "coverUrl": "https://raw.githubusercontent.com/xlenore/ps2-covers/main/covers/default/SLUS-20014.jpg",
+      "cheats": {
+        "widescreen": "patch=1,EE,001E3100,word,3F400000 // 16:9 Widescreen",
+        "fps60": "patch=1,EE,00181120,word,00000000 // 60 FPS",
+        "pnach": "gametitle=Tekken Tag Tournament (USA)\ncomment=Cheats Essenciais\n// Destravar Todos os Lutadores\npatch=1,EE,202F1230,word,FFFFFFFF\n",
+        "codes": [
+          {
+            "name": "Destravar Todos os Lutadores",
+            "code": "202F1230 FFFFFFFF"
+          }
+        ]
+      }
+    },
+    {
+      "serial": "SLUS-21503",
+      "aliases": [
+        "SLUS_215.03",
+        "SLES-54439"
+      ],
+      "title": "Guitar Hero III: Legends of Rock",
+      "cleanTitle": "Guitar Hero III Legends of Rock",
+      "genre": "Ritmo / Música",
+      "year": 2007,
+      "developer": "Neversoft / RedOctane",
+      "players": "1 - 2 Jogadores",
+      "requirementTier": "Médio",
+      "requirementDescription": "Exige sincronia de áudio precisa. Use latência de áudio 'Equilibrada' ou 'Baixa' para notas no compasso correto.",
+      "coverUrl": "https://raw.githubusercontent.com/xlenore/ps2-covers/main/covers/default/SLUS-21503.jpg",
+      "cheats": {
+        "widescreen": "patch=1,EE,002A1900,word,3F400000 // 16:9 Widescreen",
+        "fps60": "patch=1,EE,0024A120,word,00000000 // 60 FPS",
+        "pnach": "gametitle=Guitar Hero III - Legends of Rock (USA)\ncomment=Cheats Essenciais\n// Destravar Todas as Músicas\npatch=1,EE,204F8A90,word,FFFFFFFF\n",
+        "codes": [
+          {
+            "name": "Destravar Todas as Músicas",
+            "code": "204F8A90 FFFFFFFF"
+          },
+          {
+            "name": "Modo Não Errar Notas",
+            "code": "204F8A94 00000001"
+          }
+        ]
+      }
+    },
+    {
+      "serial": "GEN-SONIC2",
+      "aliases": [
+        "Sonic The Hedgehog 2",
+        "Sonic 2",
+        "Sonic The Hedgehog 2 (World)",
+        "Sonic The Hedgehog 2 (World) (Rev A)"
+      ],
+      "title": "Sonic the Hedgehog 2",
+      "cleanTitle": "Sonic The Hedgehog 2",
+      "genre": "Plataforma / Clássico",
+      "year": 1992,
+      "developer": "Sonic Team / Sega",
+      "players": "1 - 2 Jogadores",
+      "requirementTier": "Leve",
+      "requirementDescription": "16-bit clássico de Mega Drive / Sega Genesis. Roda com 60 FPS cravados e suavidade máxima em qualquer PC.",
+      "coverUrl": "/covers/sonic2.jpg",
+      "cheats": {
+        "widescreen": "// Jogo clássico 4:3 com suporte a escala perfeita",
+        "fps60": "// 60 FPS nativo de Mega Drive",
+        "pnach": "// Truques de Seleção de Fase e Super Sonic\n",
+        "codes": [
+          {
+            "name": "[Código Menu] Seleção de Fases (Level Select)",
+            "code": "Opções > Sound Test: 19, 65, 09, 17. Voltar e segurar A + START no 1P"
+          },
+          {
+            "name": "[Código Fase] Todas as Esmeraldas (Super Sonic)",
+            "code": "Na Seleção de Fases > Sound Test: 04, 01, 02, 06. Colete 50 anéis e pule"
+          },
+          {
+            "name": "[Código Fase] Modo Debug Completo",
+            "code": "Na Seleção de Fases > Sound Test: 01, 09, 09, 02, 01, 01, 02, 04. Segurar A + START na fase"
+          },
+          {
+            "name": "[Código Menu] 14 Continues Iniciais",
+            "code": "Opções > Sound Test: 01, 01, 02, 04"
+          }
+        ]
+      },
+      "isPs2Exclusive": false,
+      "platform": "Sega Genesis / Mega Drive",
+      "runner": "blastem"
+    },
+    {
+      "serial": "GM4E01",
+      "aliases": [
+        "GM4P01",
+        "GM4J01"
+      ],
+      "title": "Mario Kart: Double Dash!!",
+      "cleanTitle": "Mario Kart Double Dash",
+      "genre": "Corrida / Multiplayer",
+      "year": 2003,
+      "developer": "Nintendo EAD",
+      "players": "1 - 4 Jogadores",
+      "requirementTier": "Equilibrado (60 FPS)",
+      "requirementDescription": "Clássico atemporal do Nintendo GameCube com sistema de duplas por kart. Roda a 60 FPS com áudio DSP estéreo no Dolphin.",
+      "coverUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_GameCube/master/Named_Boxarts/Mario%20Kart%20-%20Double%20Dash!!%20(USA).png",
+      "cheats": {
+        "widescreen": "Nativo 16:9",
+        "fps60": "60 FPS nativo",
+        "codes": [
+          {
+            "name": "Desbloquear Todos os Karts e Copas",
+            "code": "043CD9F0 FFFFFFFF"
+          },
+          {
+            "name": "Velocidade Máxima Turbinada",
+            "code": "043CCE80 43000000"
+          }
+        ]
+      },
+      "isPs2Exclusive": false,
+      "exclusiveRunnerTip": "Executado através do Dolphin Desktop com Direct3D 11/12 e suporte a até 4 controles simultâneos."
+    }
+  ]
+}

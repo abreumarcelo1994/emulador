@@ -1,0 +1,8 @@
+{
+  "configured": true,
+  "emulatorPath": "c:\\Users\\Win\\Desktop\\emulador\\desktop-runner\\pcsx2\\pcsx2.exe",
+  "customArgs": "--nogui --fullscreen \"{iso}\"",
+  "recommended": "PCSX2 1.6.0 (Direct3D 11 Hardware • AVX/SSE4.1)",
+  "profile": "Intel Core i7-2670QM + Intel HD Graphics 3000",
+  "notes": "Executa jogos de PS2 fora do navegador a 60 FPS com aceleracao de hardware nativa Direct3D 11."
+}

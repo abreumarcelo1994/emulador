@@ -1,0 +1,6 @@
+COLOQUE AQUI SUAS ROMS DE NINTENDO NES (NINTENDINHO)
+===================================================
+Formatos aceitos: .nes
+Emulador Acelerador Integrado: FCEUX
+Desempenho: 60 FPS com aceleracao nativa de hardware.
+Basta colocar seus jogos aqui e abrir a central em http://127.0.0.1:8620!

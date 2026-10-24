@@ -1,0 +1,6 @@
+COLOQUE AQUI SUAS ROMS DE PLAYSTATION 2
+===================================================
+Formatos aceitos: .iso, .cso, .chd
+Emulador Acelerador Integrado: PCSX2 1.6.0
+Desempenho: 60 FPS com aceleracao nativa de hardware.
+Basta colocar seus jogos aqui e abrir a central em http://127.0.0.1:8620!

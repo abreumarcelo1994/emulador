@@ -1,0 +1,35 @@
+gametitle=Need for Speed: Underground 2 (USA) [SLUS-21065] (CRC: F5C7B45F)
+comment=Cheats Essenciais, Widescreen 16:9 e 60 FPS
+
+// ==========================================
+// PATCH WIDESCREEN 16:9 NATIVO
+// ==========================================
+// Aspect ratio
+patch=1,EE,0056FB44,word,3F5B8D14
+// Corrected 4:3 aspect
+patch=1,EE,0056FB48,word,3F24A9CF
+// Corrected 16:9 aspect
+patch=1,EE,0056FBF4,word,3F154000
+// Corrected 4:3 rendering
+patch=1,EE,0056FBF8,word,3F470000
+// Icons fix
+patch=1,EE,001CCAF4,word,0C0ED18B
+patch=1,EE,003B462C,word,3C03004C
+patch=1,EE,003B4630,word,E474D848
+patch=1,EE,003B4634,word,03E00008
+patch=1,EE,003B4638,word,2404001A
+
+// ==========================================
+// TRAPAÇAS E CÓDIGOS DE JOGO
+// ==========================================
+// Nitro Infinito (Infinite Nitrous)
+patch=1,EE,204B1030,word,42C80000
+
+// Dinheiro Máximo no Modo Carreira ($99.999.999)
+patch=1,EE,204C3E90,word,05F5E0FF
+
+// Destravar Todas as Peças de Performance Nível 3
+patch=1,EE,204C3E94,word,FFFFFFFF
+
+// Destravar Todos os Kits Visuais e Rodas
+patch=1,EE,204C3E98,word,FFFFFFFF

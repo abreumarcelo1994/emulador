@@ -1,0 +1,42 @@
+# ======================================================================
+# .gitignore — RetroStation Console
+# Arquitetura leve (~25 MB) em conformidade com as 18 Leis de UX
+# ======================================================================
+
+# Imagens de ROMs e ISOs pesadas de jogos comerciais
+*.iso
+*.rvz
+*.cso
+*.gcm
+*.chd
+*.part
+*.7z
+*.zip
+*.rar
+
+# Preservar pastas organizadas de consoles com .gitkeep e instruções
+!library/**/.gitkeep
+!library/**/COMO_ADICIONAR_JOGOS.txt
+!library/**/*.txt
+!library/**/*.pnach
+
+# Binários compilados dos emuladores (instalados via SETUP_NOVO_DISPOSITIVO.bat)
+desktop-runner/*/
+!desktop-runner/.gitkeep
+!desktop-runner/config.json
+!desktop-runner/*.mjs
+!desktop-runner/*.bat
+
+# Arquivos temporários, dependências e scratchpad
+node_modules/
+Play-source/
+scratch/
+*.log
+*.lock
+.system_generated/
+
+
+# Caches do sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini

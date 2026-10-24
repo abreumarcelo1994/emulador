@@ -1,0 +1,69 @@
+==========================================================================
+   NEED FOR SPEED: UNDERGROUND 2 — GUIA COMPLETO DE CHEATS E CÓDIGOS
+   Versão Americana Completa (NTSC-U / SLUS-21065 / CRC: F5C7B45F)
+==========================================================================
+
+COMO USAR OS CÓDIGOS DE BOTÕES:
+Digite os códigos abaixo na tela de título inicial onde aparece escrito "PRESS START".
+Se o código for inserido corretamente, você ouvirá um efeito sonoro de confirmação (som de motor/buzina).
+
+--------------------------------------------------------------------------
+1. CÓDIGOS DE DINHEIRO E MODO CARREIRA
+--------------------------------------------------------------------------
+* Começar o Modo Carreira com +$1.000 de Bônus:
+  CIMA, CIMA, CIMA, ESQUERDA, R1, R1, R1, BAIXO
+
+* Bônus de +$200 no Modo Carreira:
+  CIMA, CIMA, CIMA, ESQUERDA, R1, R1, R1, BAIXO (ou R1, R1, R1, R1, QUADRADO)
+
+--------------------------------------------------------------------------
+2. DESTRAVAR PEÇAS DE PERFORMANCE E VISUAIS
+--------------------------------------------------------------------------
+* Destravar Peças de Performance Nível 1:
+  L1, R1, L1, R1, ESQUERDA, ESQUERDA, DIREITA, CIMA
+
+* Destravar Peças de Performance Nível 2:
+  R1, R1, L1, R1, ESQUERDA, DIREITA, CIMA, BAIXO
+
+* Destravar Peças Visuais Nível 1:
+  R1, R1, CIMA, BAIXO, L1, L1, CIMA, BAIXO
+
+* Destravar Peças Visuais Nível 2:
+  L1, R1, CIMA, BAIXO, L1, CIMA, CIMA, BAIXO
+
+--------------------------------------------------------------------------
+3. DESTRAVAR PISTAS E CARROS DE CORRIDA RÁPIDA
+--------------------------------------------------------------------------
+* Destravar Todas as Pistas de Circuito:
+  BAIXO, R1, R1, R1, R2, R2, R2, QUADRADO
+
+* Destravar Mazda RX-8 e Nissan Skyline no Quick Race:
+  ESQUERDA, ESQUERDA, DIREITA, QUADRADO, QUADRADO, DIREITA, L1, R1
+
+* Hummer H2 Capone:
+  CIMA, ESQUERDA, CIMA, CIMA, BAIXO, ESQUERDA, BAIXO, ESQUERDA
+
+* Lincoln Navigator Chingy:
+  CIMA, DIREITA, CIMA, CIMA, BAIXO, DIREITA, BAIXO, DIREITA
+
+* Lexus IS300 ShineStreet:
+  CIMA, BAIXO, ESQUERDA, CIMA, ESQUERDA, CIMA, DIREITA, ESQUERDA
+
+--------------------------------------------------------------------------
+4. VINIS ESPECIAIS DE PATROCINADORES
+--------------------------------------------------------------------------
+* Vinil Burger King:
+  CIMA, CIMA, CIMA, CIMA, BAIXO, CIMA, CIMA, ESQUERDA
+
+* Vinil Best Buy:
+  CIMA, BAIXO, CIMA, BAIXO, BAIXO, CIMA, DIREITA, ESQUERDA
+
+--------------------------------------------------------------------------
+5. CÓDIGOS HEXADECIMAIS / ARQUIVO .PNACH (JÁ INCLUÍDO)
+--------------------------------------------------------------------------
+O arquivo 'SLUS-21065_F5C7B45F.pnach' já foi gerado na sua pasta. Ele contém:
+- Patch Widescreen 16:9 Nativo (sem esticar a imagem)
+- Nitro Infinito (Active Nitrous Infinito)
+- Dinheiro Máximo no Carreira ($99.999.999)
+- Peças de Performance e Visuais Liberadas
+==========================================================================

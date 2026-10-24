@@ -1,0 +1,33 @@
+================================================================================
+🎮 PASTA DE JOGOS NATIVOS DE PC — PS2 CONSOLE STATION
+================================================================================
+
+Aqui você pode colocar qualquer jogo de PC para jogar a 60 FPS com 1 clique direto 
+pela interface da sua central!
+
+COMO ADICIONAR SEUS JOGOS DE PC:
+1. Você pode colar aqui:
+   - Um atalho (.lnk) do jogo que já está instalado no seu computador.
+     Exemplo: Atalho de "Need for Speed Underground 2.lnk", "GTA San Andreas.lnk".
+   - Ou o próprio executável (.exe) do jogo.
+   - Ou um arquivo de inicialização (.bat).
+
+2. VANTAGENS PARA O SEU HARDWARE (Intel Core i7-2670QM + Intel HD Graphics 3000):
+   - 0% de sobrecarga de emulação: roda 100% nativo no Windows.
+   - 60 FPS cravados e fluidos.
+   - Totalmente compatível com seu controle USB/Bluetooth.
+   - Resolução máxima da sua tela.
+
+3. JOGOS CLÁSSICOS RECOMENDADOS QUE RODAM PERFEITAMENTE:
+   - Need for Speed: Underground 1 e 2
+   - Need for Speed: Most Wanted (2005) e Carbon
+   - Grand Theft Auto: San Andreas, Vice City, III
+   - Resident Evil 4 (Edição Clássica de PC)
+   - Silent Hill 2, 3 e 4
+   - Devil May Cry 3: Special Edition
+   - Pro Evolution Soccer 6 / PES 2013
+   - Tony Hawk's Underground 2
+   - Portes Nativos de Decompilação: Jak and Daxter (OpenGOAL), Zelda (Ship of Harkinian)
+
+Assim que colocar o atalho ou executável aqui, clique em "Atualizar Biblioteca" na página!
+================================================================================

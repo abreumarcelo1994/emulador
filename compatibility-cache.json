@@ -1,0 +1,543 @@
+{
+  "8e19fcc2581b1ec39ae7bd53": {
+    "status": "found",
+    "checkedAt": "2026-10-17T14:41:38.293Z",
+    "reports": [
+      {
+        "title": "[SCES-50858] Gran Turismo Concept: 2002 Tokyo-Geneva",
+        "state": "open",
+        "url": "https://github.com/jpd002/Play-Compatibility/issues/351",
+        "updatedAt": "2018-05-16T19:27:29Z"
+      },
+      {
+        "title": "[SLUS-21196] Indigo Prophecy",
+        "state": "open",
+        "url": "https://github.com/jpd002/Play-Compatibility/issues/214",
+        "updatedAt": "2023-05-27T21:59:27Z"
+      },
+      {
+        "title": "[SLUS-20827] Manhunt",
+        "state": "open",
+        "url": "https://github.com/jpd002/Play-Compatibility/issues/259",
+        "updatedAt": "2021-05-28T13:50:28Z"
+      }
+    ]
+  },
+  "aa3d9dbc0ed8cfa9c5260bb3": {
+    "status": "not-found",
+    "checkedAt": "2026-10-17T14:41:45.604Z",
+    "reports": []
+  },
+  "129124c7b0d7152a39609ff7": {
+    "status": "found",
+    "checkedAt": "2026-10-17T14:41:52.650Z",
+    "reports": [
+      {
+        "title": "[SCES-50858] Gran Turismo Concept: 2002 Tokyo-Geneva",
+        "state": "open",
+        "url": "https://github.com/jpd002/Play-Compatibility/issues/351",
+        "updatedAt": "2018-05-16T19:27:29Z"
+      },
+      {
+        "title": "[SLUS-21196] Indigo Prophecy",
+        "state": "open",
+        "url": "https://github.com/jpd002/Play-Compatibility/issues/214",
+        "updatedAt": "2023-05-27T21:59:27Z"
+      },
+      {
+        "title": "[SLUS-20827] Manhunt",
+        "state": "open",
+        "url": "https://github.com/jpd002/Play-Compatibility/issues/259",
+        "updatedAt": "2021-05-28T13:50:28Z"
+      }
+    ]
+  },
+  "accb7f91944d70fd5b63fbdb": {
+    "status": "not-found",
+    "checkedAt": "2026-10-17T14:41:59.701Z",
+    "reports": []
+  },
+  "e3e3186f99e239257553487f": {
+    "status": "found",
+    "checkedAt": "2026-10-24T16:20:19.341Z",
+    "reports": [
+      {
+        "title": "[SLES-52725] Need for Speed: Underground 2",
+        "state": "open",
+        "url": "https://github.com/jpd002/Play-Compatibility/issues/2759",
+        "updatedAt": "2025-01-21T21:32:27Z"
+      },
+      {
+        "title": "[SLUS-21065] Need for Speed - Underground 2",
+        "state": "open",
+        "url": "https://github.com/jpd002/Play-Compatibility/issues/768",
+        "updatedAt": "2024-01-12T08:42:39Z"
+      },
+      {
+        "title": "[SCUS-97328] Gran Turismo 4",
+        "state": "open",
+        "url": "https://github.com/jpd002/Play-Compatibility/issues/2",
+        "updatedAt": "2022-08-29T14:12:23Z"
+      }
+    ]
+  },
+  "a6079a715e9f49e50da6408f": {
+    "status": "not-found",
+    "checkedAt": "2026-10-17T16:28:27.902Z",
+    "reports": []
+  },
+  "e86bbbe3028a4e16a6ba2824": {
+    "status": "not-found",
+    "checkedAt": "2026-10-17T16:28:31.231Z",
+    "reports": []
+  },
+  "65a20dfca425f71fd2437fc3": {
+    "status": "not-found",
+    "checkedAt": "2026-10-17T16:28:34.505Z",
+    "reports": []
+  },
+  "5dd2100b6ebe33706cac16ee": {
+    "status": "not-found",
+    "checkedAt": "2026-10-17T16:28:37.751Z",
+    "reports": []
+  },
+  "198f13b4b273a520400a826a": {
+    "status": "not-found",
+    "checkedAt": "2026-10-17T16:28:40.988Z",
+    "reports": []
+  },
+  "d2ecf50ea51b6a183a53bccf": {
+    "status": "not-found",
+    "checkedAt": "2026-10-17T16:28:44.269Z",
+    "reports": []
+  },
+  "eefd5e71c825876c593987cb": {
+    "status": "found",
+    "checkedAt": "2026-10-17T16:28:47.596Z",
+    "reports": [
+      {
+        "title": "[gsKit] examples",
+        "state": "open",
+        "url": "https://github.com/jpd002/Play-Compatibility/issues/1097",
+        "updatedAt": "2020-04-23T08:12:31Z"
+      },
+      {
+        "title": "[SLUS-20210] 18 Wheeler: American Pro Trucker",
+        "state": "open",
+        "url": "https://github.com/jpd002/Play-Compatibility/issues/1208",
+        "updatedAt": "2022-12-31T19:15:15Z"
+      },
+      {
+        "title": "[SLUS-20111] Deus Ex - The Conspiracy",
+        "state": "open",
+        "url": "https://github.com/jpd002/Play-Compatibility/issues/399",
+        "updatedAt": "2022-12-18T16:50:19Z"
+      }
+    ]
+  },
+  "41bbe71ba6f7b376b6e3dcb0": {
+    "status": "found",
+    "checkedAt": "2026-10-17T16:28:50.929Z",
+    "reports": [
+      {
+        "title": "[SLUS-21029] Midnight Club 3 Dub Edition",
+        "state": "open",
+        "url": "https://github.com/jpd002/Play-Compatibility/issues/897",
+        "updatedAt": "2021-03-11T22:25:15Z"
+      }
+    ]
+  },
+  "0428849f56def152baed84ef": {
+    "status": "found",
+    "checkedAt": "2026-10-17T16:28:54.248Z",
+    "reports": [
+      {
+        "title": "[SLUS-29031] Metal Gear Solid 2: Sons of Liberty (Trial Version)",
+        "state": "open",
+        "url": "https://github.com/jpd002/Play-Compatibility/issues/265",
+        "updatedAt": "2022-02-22T00:14:04Z"
+      },
+      {
+        "title": "[SLPM-66980] Gin no Eclipse",
+        "state": "open",
+        "url": "https://github.com/jpd002/Play-Compatibility/issues/2505",
+        "updatedAt": "2023-01-14T23:00:59Z"
+      },
+      {
+        "title": "[SLUS-20458] Dr.Muto",
+        "state": "open",
+        "url": "https://github.com/jpd002/Play-Compatibility/issues/929",
+        "updatedAt": "2019-07-04T05:04:00Z"
+      }
+    ]
+  },
+  "27bde857b4a5bccf5b025fd9": {
+    "status": "not-found",
+    "checkedAt": "2026-10-17T16:28:57.514Z",
+    "reports": []
+  },
+  "15fdb5eb1086d680bb7ee242": {
+    "status": "playable",
+    "checkedAt": "2026-10-17T16:29:00.553Z",
+    "reports": [],
+    "message": "Compatibilidade local verificada"
+  },
+  "8eea5e6f623bc1ce3527af4c": {
+    "status": "playable",
+    "checkedAt": "2026-10-17T16:29:03.579Z",
+    "reports": [],
+    "message": "Compatibilidade local verificada"
+  },
+  "f8b8ac64963b31ebd9a9ceac": {
+    "status": "playable",
+    "checkedAt": "2026-10-17T16:29:06.622Z",
+    "reports": [],
+    "message": "Compatibilidade local verificada"
+  },
+  "946360be9d4e174a0e96f603": {
+    "status": "playable",
+    "checkedAt": "2026-10-17T16:29:09.661Z",
+    "reports": [],
+    "message": "Compatibilidade local verificada"
+  },
+  "0be7038bcec27e73060af753": {
+    "status": "playable",
+    "checkedAt": "2026-10-17T16:29:12.700Z",
+    "reports": [],
+    "message": "Compatibilidade local verificada"
+  },
+  "fc051672b2d60ed75437361c": {
+    "status": "playable",
+    "checkedAt": "2026-10-17T16:29:15.736Z",
+    "reports": [],
+    "message": "Compatibilidade local verificada"
+  },
+  "5d82859a535bc0ddacda210f": {
+    "status": "playable",
+    "checkedAt": "2026-10-17T16:29:18.768Z",
+    "reports": [],
+    "message": "Compatibilidade local verificada"
+  },
+  "ebe1e97f10acda56701e328d": {
+    "status": "playable",
+    "checkedAt": "2026-10-17T16:29:21.807Z",
+    "reports": [],
+    "message": "Compatibilidade local verificada"
+  },
+  "6cabda29730bb5767ef86126": {
+    "status": "playable",
+    "checkedAt": "2026-10-17T16:29:24.842Z",
+    "reports": [],
+    "message": "Compatibilidade local verificada"
+  },
+  "fd6f03c840aadf7302ad080f": {
+    "status": "not-found",
+    "checkedAt": "2026-10-17T16:29:28.104Z",
+    "reports": []
+  },
+  "fc50fe1b14445da82855d89a": {
+    "status": "not-found",
+    "checkedAt": "2026-10-17T16:29:31.371Z",
+    "reports": []
+  },
+  "030c8c2fa1a132a88805c42a": {
+    "status": "not-found",
+    "checkedAt": "2026-10-17T16:29:34.622Z",
+    "reports": []
+  },
+  "2fb15a58963f7cde27b960e8": {
+    "status": "not-found",
+    "checkedAt": "2026-10-17T16:29:37.864Z",
+    "reports": []
+  },
+  "ba7caacbe61698d1d730ac58": {
+    "status": "not-found",
+    "checkedAt": "2026-10-17T16:29:41.180Z",
+    "reports": []
+  },
+  "85b04d10a4f82b5699be1bc3": {
+    "status": "not-found",
+    "checkedAt": "2026-10-17T16:29:44.418Z",
+    "reports": []
+  },
+  "198791ccf3a62baeac619626": {
+    "status": "not-found",
+    "checkedAt": "2026-10-17T16:29:47.680Z",
+    "reports": []
+  },
+  "e93700b9377738fcc4e9594d": {
+    "status": "not-found",
+    "checkedAt": "2026-10-17T16:29:50.960Z",
+    "reports": []
+  },
+  "e34ca60e5ca5165fa112b156": {
+    "status": "not-found",
+    "checkedAt": "2026-10-17T16:29:54.226Z",
+    "reports": []
+  },
+  "cc27dc417bbde9f131a5611f": {
+    "status": "not-found",
+    "checkedAt": "2026-10-17T16:29:57.500Z",
+    "reports": []
+  },
+  "126f7417f53355d1d8b487b7": {
+    "status": "playable",
+    "checkedAt": "2026-10-17T16:30:00.540Z",
+    "reports": [],
+    "message": "Compatibilidade local verificada"
+  },
+  "08b3607f3c7718d1468acb0f": {
+    "status": "not-found",
+    "checkedAt": "2026-10-17T19:55:53.413Z",
+    "reports": []
+  },
+  "8ade32d3cf9f853bf58c403f": {
+    "status": "found",
+    "checkedAt": "2026-10-24T16:20:16.303Z",
+    "reports": [
+      {
+        "title": "[SCUS 97111] (U) Dark Cloud",
+        "state": "closed",
+        "url": "https://github.com/jpd002/Play-Compatibility/issues/1232",
+        "updatedAt": "2020-11-09T15:37:50Z"
+      }
+    ]
+  },
+  "c41c49c042e3a44a771cc089": {
+    "status": "found",
+    "checkedAt": "2026-10-24T16:32:26.880Z",
+    "reports": [
+      {
+        "title": "[SLES-52725] Need for Speed: Underground 2",
+        "state": "open",
+        "url": "https://github.com/jpd002/Play-Compatibility/issues/2759",
+        "updatedAt": "2025-01-21T21:32:27Z"
+      },
+      {
+        "title": "[SLUS-21065] Need for Speed - Underground 2",
+        "state": "open",
+        "url": "https://github.com/jpd002/Play-Compatibility/issues/768",
+        "updatedAt": "2024-01-12T08:42:39Z"
+      },
+      {
+        "title": "[SCUS-97328] Gran Turismo 4",
+        "state": "open",
+        "url": "https://github.com/jpd002/Play-Compatibility/issues/2",
+        "updatedAt": "2022-08-29T14:12:23Z"
+      }
+    ]
+  },
+  "ada6a37d61ed983f2c2e1225": {
+    "status": "found",
+    "checkedAt": "2026-10-24T18:06:07.187Z",
+    "reports": [
+      {
+        "title": "[SCUS-97328] Gran Turismo 4",
+        "state": "open",
+        "url": "https://github.com/jpd002/Play-Compatibility/issues/2",
+        "updatedAt": "2022-08-29T14:12:23Z"
+      },
+      {
+        "title": "[SLES-52998] Sonic Mega Collection Plus",
+        "state": "open",
+        "url": "https://github.com/jpd002/Play-Compatibility/issues/509",
+        "updatedAt": "2018-07-18T21:04:17Z"
+      }
+    ]
+  },
+  "a4de0c62f34bbd18fea6ae01": {
+    "status": "found",
+    "checkedAt": "2026-10-24T18:06:10.529Z",
+    "reports": [
+      {
+        "title": "[SLUS-20919] ESPN NFL 2K5",
+        "state": "open",
+        "url": "https://github.com/jpd002/Play-Compatibility/issues/1270",
+        "updatedAt": "2026-10-01T01:18:12Z"
+      },
+      {
+        "title": "[SLPM-62506] Vampire Panic English translation",
+        "state": "open",
+        "url": "https://github.com/jpd002/Play-Compatibility/issues/1277",
+        "updatedAt": "2025-04-15T23:08:38Z"
+      },
+      {
+        "title": "[SLUS-21658] Need for Speed - ProStreet",
+        "state": "open",
+        "url": "https://github.com/jpd002/Play-Compatibility/issues/765",
+        "updatedAt": "2019-02-11T18:20:42Z"
+      }
+    ]
+  },
+  "a0c813fbf094e71c266c8ffb": {
+    "status": "not-found",
+    "checkedAt": "2026-10-24T18:06:13.807Z",
+    "reports": []
+  },
+  "b67a671b0b51f72acd4a1f4e": {
+    "status": "found",
+    "checkedAt": "2026-10-24T18:06:17.114Z",
+    "reports": [
+      {
+        "title": "[SLUS-21631] Phantasy Star Universe: Ambition of the Illuminus v1.00",
+        "state": "open",
+        "url": "https://github.com/jpd002/Play-Compatibility/issues/1229",
+        "updatedAt": "2021-03-10T03:28:43Z"
+      },
+      {
+        "title": "[SLUS-21194] Phantasy Star Universe v1.00",
+        "state": "open",
+        "url": "https://github.com/jpd002/Play-Compatibility/issues/1228",
+        "updatedAt": "2021-03-10T14:56:00Z"
+      }
+    ]
+  },
+  "c2395529afa887acd91321be": {
+    "status": "not-found",
+    "checkedAt": "2026-10-24T18:06:20.406Z",
+    "reports": []
+  },
+  "c5cd9be42eb019464cc3b830": {
+    "status": "found",
+    "checkedAt": "2026-10-24T18:06:23.449Z",
+    "reports": [
+      {
+        "title": "[SLUS-20919] ESPN NFL 2K5",
+        "state": "open",
+        "url": "https://github.com/jpd002/Play-Compatibility/issues/1270",
+        "updatedAt": "2026-10-01T01:18:12Z"
+      },
+      {
+        "title": "[SLPM-62506] Vampire Panic English translation",
+        "state": "open",
+        "url": "https://github.com/jpd002/Play-Compatibility/issues/1277",
+        "updatedAt": "2025-04-15T23:08:38Z"
+      },
+      {
+        "title": "[SLUS-21658] Need for Speed - ProStreet",
+        "state": "open",
+        "url": "https://github.com/jpd002/Play-Compatibility/issues/765",
+        "updatedAt": "2019-02-11T18:20:42Z"
+      }
+    ]
+  },
+  "c28c7579ed9785becc0ca49b": {
+    "status": "found",
+    "checkedAt": "2026-10-24T18:06:26.482Z",
+    "reports": [
+      {
+        "title": "[SLUS-20919] ESPN NFL 2K5",
+        "state": "open",
+        "url": "https://github.com/jpd002/Play-Compatibility/issues/1270",
+        "updatedAt": "2026-10-01T01:18:12Z"
+      },
+      {
+        "title": "[SLPM-62506] Vampire Panic English translation",
+        "state": "open",
+        "url": "https://github.com/jpd002/Play-Compatibility/issues/1277",
+        "updatedAt": "2025-04-15T23:08:38Z"
+      },
+      {
+        "title": "[SLUS-21658] Need for Speed - ProStreet",
+        "state": "open",
+        "url": "https://github.com/jpd002/Play-Compatibility/issues/765",
+        "updatedAt": "2019-02-11T18:20:42Z"
+      }
+    ]
+  },
+  "566887b0dbdff454d73d99a4": {
+    "status": "not-found",
+    "checkedAt": "2026-10-24T18:06:29.510Z",
+    "reports": []
+  },
+  "0a0dd353e49443c70fcce474": {
+    "status": "not-found",
+    "checkedAt": "2026-10-24T18:06:32.824Z",
+    "reports": []
+  },
+  "1e6379ab87d889a3b056990e": {
+    "status": "playable",
+    "checkedAt": "2026-10-24T18:06:35.856Z",
+    "reports": [],
+    "message": "Compatibilidade local verificada"
+  },
+  "24ea84c708ce23a9768b9ed2": {
+    "status": "found",
+    "checkedAt": "2026-10-24T18:34:49.392Z",
+    "reports": [
+      {
+        "title": "[SCUS-97328] Gran Turismo 4",
+        "state": "open",
+        "url": "https://github.com/jpd002/Play-Compatibility/issues/2",
+        "updatedAt": "2022-08-29T14:12:23Z"
+      }
+    ]
+  },
+  "2c40dff1a189aabd49d91afe": {
+    "status": "found",
+    "checkedAt": "2026-10-24T19:19:40.962Z",
+    "reports": [
+      {
+        "title": "[SCUS-97328] Gran Turismo 4",
+        "state": "open",
+        "url": "https://github.com/jpd002/Play-Compatibility/issues/2",
+        "updatedAt": "2022-08-29T14:12:23Z"
+      },
+      {
+        "title": "[SLES-52998] Sonic Mega Collection Plus",
+        "state": "open",
+        "url": "https://github.com/jpd002/Play-Compatibility/issues/509",
+        "updatedAt": "2018-07-18T21:04:17Z"
+      }
+    ]
+  },
+  "5bcc76b7342cb72e7e3ae9b6": {
+    "status": "found",
+    "checkedAt": "2026-10-24T19:19:37.928Z",
+    "reports": [
+      {
+        "title": "[SLES-52725] Need for Speed: Underground 2",
+        "state": "open",
+        "url": "https://github.com/jpd002/Play-Compatibility/issues/2759",
+        "updatedAt": "2025-01-21T21:32:27Z"
+      },
+      {
+        "title": "[SLUS-21065] Need for Speed - Underground 2",
+        "state": "open",
+        "url": "https://github.com/jpd002/Play-Compatibility/issues/768",
+        "updatedAt": "2024-01-12T08:42:39Z"
+      },
+      {
+        "title": "[SCUS-97328] Gran Turismo 4",
+        "state": "open",
+        "url": "https://github.com/jpd002/Play-Compatibility/issues/2",
+        "updatedAt": "2022-08-29T14:12:23Z"
+      }
+    ]
+  },
+  "482e0fbbf26fa0a5349e6f54": {
+    "status": "not-found",
+    "checkedAt": "2026-10-24T19:29:21.084Z",
+    "reports": []
+  },
+  "dd3ae5651a53b14f9d927271": {
+    "status": "not-found",
+    "checkedAt": "2026-10-24T19:44:49.994Z",
+    "reports": []
+  },
+  "efa9a15e4b21370b6ee8280a": {
+    "status": "not-found",
+    "checkedAt": "2026-10-24T19:44:46.958Z",
+    "reports": []
+  },
+  "ebf89c7a55044b506ff91343": {
+    "status": "not-found",
+    "checkedAt": "2026-10-24T20:12:46.765Z",
+    "reports": []
+  },
+  "e1ba0260cfb519208c2f5b56": {
+    "status": "not-found",
+    "checkedAt": "2026-10-24T20:12:43.728Z",
+    "reports": []
+  }
+}
