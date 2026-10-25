@@ -13,6 +13,8 @@
 *.7z
 *.zip
 *.rar
+*.sav
+library/**/*.png
 
 # Preservar pastas organizadas de consoles com .gitkeep e instruções
 !library/**/.gitkeep

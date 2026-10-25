@@ -45,6 +45,9 @@
         <button type="button" class="btn-action-top" id="btnRefreshLibrary" title="Reescanear biblioteca de jogos">
           <span>🔄</span> Atualizar
         </button>
+        <button type="button" class="btn-action-top btn-arcade-accent" id="btnLaunchEsDe" title="Iniciar Interface de TV e Arcade (EmulationStation Desktop Edition)">
+          <span>📺</span> Modo TV Arcade
+        </button>
         <button type="button" class="btn-action-top btn-highlight" id="btnScrollToSettings" title="Configurações e Ferramentas">
           <span>⚙️</span> Ajustes
         </button>
@@ -164,6 +167,9 @@
           <button type="button" class="btn-carousel-nav btn-carousel-next" id="btnCarouselNext" title="Próximo">
             <span>▶</span>
           </button>
+          <button type="button" class="btn-tag-action btn-arcade-glow" id="btnLaunchEsDeCatalog" title="Iniciar Interface de TV e Arcade (ES-DE)">
+            <span>📺</span> EmulationStation (ES-DE)
+          </button>
           <button type="button" class="btn-tag-action" id="btnOpenPcFolder">
             <span>💻</span> Pasta Jogos PC
           </button>
@@ -173,6 +179,16 @@
       <!-- CARROSSEL HORIZONTAL DE CARDS -->
       <div class="games-carousel-track" id="gameGrid">
         <!-- Renderizado pelo app.js -->
+      </div>
+
+      <!-- HUD DE CONTROLES NO SOFÁ (Lei de Jakob & Fitts) -->
+      <div class="gamepad-hud-bar" id="gamepadHudHints" title="Atalhos do Controle e Teclado">
+        <span class="hud-hint-item"><kbd class="kbd-btn pill">🎮 D-Pad / Setas</kbd> Navegar</span>
+        <span class="hud-hint-item"><kbd class="kbd-btn btn-a">A</kbd> Jogar</span>
+        <span class="hud-hint-item"><kbd class="kbd-btn btn-x">X</kbd> Detalhes</span>
+        <span class="hud-hint-item"><kbd class="kbd-btn btn-b">B</kbd> Voltar</span>
+        <span class="hud-hint-item"><kbd class="kbd-btn btn-y">Y</kbd> Modo Batata</span>
+        <span class="hud-hint-item"><kbd class="kbd-btn pill">LB / RB</kbd> Trocar Console</span>
       </div>
     </section>
 

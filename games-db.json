@@ -15,7 +15,7 @@
       "players": "1 Jogador",
       "requirementTier": "Médio (60 FPS)",
       "requirementDescription": "Clássico absoluto do PSP rodando em resolução HD/4K com Direct3D 11 ou Vulkan a 60 FPS cravados no PPSSPP.",
-      "coverUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_Portable/master/Named_Boxarts/God%20of%20War%20-%20Ghost%20of%20Sparta%20(USA)%20(En%2CFr%2CEs).png",
+      "coverUrl": "/covers/gow-ghost-of-sparta.png",
       "cheats": {
         "widescreen": "Nativo 16:9",
         "fps60": "Nativo 60 FPS no PPSSPP",
@@ -35,7 +35,9 @@
         ]
       },
       "isPs2Exclusive": false,
-      "exclusiveRunnerTip": "Executado nativamente através do Acelerador PPSSPP com shaders de alta fidelidade e até 60 FPS."
+      "exclusiveRunnerTip": "Executado nativamente através do Acelerador PPSSPP com shaders de alta fidelidade e até 60 FPS.",
+      "platform": "PlayStation Portable (PSP)",
+      "runner": "ppsspp"
     },
     {
       "serial": "SLUS-21678",
@@ -52,7 +54,7 @@
       "players": "1 - 2 Jogadores",
       "requirementTier": "Médio",
       "requirementDescription": "Roda super bem em WebAssembly. Em PCs fracos (Dual-Core / Intel HD), ative o 'Modo PC Fraco' (Frame Skip 1 e resolução 0.75x) para 60 FPS cravados.",
-      "coverUrl": "https://raw.githubusercontent.com/xlenore/ps2-covers/main/covers/default/SLUS-21678.jpg",
+      "coverUrl": "/covers/SLUS-21678.jpg",
       "cheats": {
         "widescreen": "patch=1,EE,00326A18,word,3F400000 // 16:9 Widescreen Fix",
         "fps60": "patch=1,EE,00301140,word,00000000 // Destravar 60 FPS",
@@ -97,7 +99,7 @@
       "players": "1 - 2 Jogadores",
       "requirementTier": "Médio",
       "requirementDescription": "Jogo amplo com grande mapa. Em computadores fracos, mantenha a resolução em 1x ou 0.75x para garantir fluidez constante em áreas com muitos carros.",
-      "coverUrl": "https://raw.githubusercontent.com/xlenore/ps2-covers/main/covers/default/SLUS-20946.jpg",
+      "coverUrl": "/covers/SLUS-20946.jpg",
       "cheats": {
         "widescreen": "patch=1,EE,002B4380,word,3F400000 // 16:9 Widescreen",
         "fps60": "patch=1,EE,00224420,word,00000000 // 60 FPS",
@@ -143,7 +145,7 @@
       "players": "1 Jogador",
       "requirementTier": "Médio",
       "requirementDescription": "Excelente otimização no motor do emulador. Gráficos suaves e alta compatibilidade em praticamente qualquer PC.",
-      "coverUrl": "https://raw.githubusercontent.com/xlenore/ps2-covers/main/covers/default/SLUS-21115.jpg",
+      "coverUrl": "/covers/SLUS-21115.jpg",
       "cheats": {
         "widescreen": "patch=1,EE,001B6B20,word,3F400000 // 16:9 Widescreen",
         "fps60": "patch=1,EE,00185124,word,00000000 // 60 FPS Unlock",
@@ -185,7 +187,7 @@
       "players": "1 Jogador",
       "requirementTier": "Médio",
       "requirementDescription": "Cenas épicas com muitos efeitos alfa. Recomenda-se perfil Equilibrado; em notebooks fracos, use Modo PC Fraco com Frame Skip 1.",
-      "coverUrl": "https://raw.githubusercontent.com/xlenore/ps2-covers/main/covers/default/SCUS-97399.jpg",
+      "coverUrl": "/covers/SCUS-97399.jpg",
       "cheats": {
         "widescreen": "patch=1,EE,001DA0F0,word,3F400000 // 16:9 Widescreen",
         "fps60": "patch=1,EE,001CD120,word,00000000 // 60 FPS",
@@ -222,7 +224,7 @@
       "players": "1 Jogador",
       "requirementTier": "Pesado",
       "requirementDescription": "Um dos jogos mais pesados do PS2. Exige 'Modo PC Fraco' ativado (Frame Skip 1 e resolução nativa 0.75x) para rodar liso em computadores sem placa de vídeo dedicada.",
-      "coverUrl": "https://raw.githubusercontent.com/xlenore/ps2-covers/main/covers/default/SCUS-97481.jpg",
+      "coverUrl": "/covers/SCUS-97481.jpg",
       "cheats": {
         "widescreen": "patch=1,EE,0021A5C0,word,3F400000 // 16:9 Widescreen",
         "fps60": "patch=1,EE,0020B110,word,00000000 // 60 FPS",
@@ -259,7 +261,7 @@
       "players": "1 - 2 Jogadores",
       "requirementTier": "Médio",
       "requirementDescription": "Mundo aberto dinâmico e perseguições policiais. Ótimo desempenho com resolução 1x e aceleração gráfica WebGL.",
-      "coverUrl": "https://raw.githubusercontent.com/xlenore/ps2-covers/main/covers/default/SLUS-21258.jpg",
+      "coverUrl": "/covers/SLUS-21258.jpg",
       "cheats": {
         "widescreen": "patch=1,EE,002829F8,word,3F400000 // 16:9 Widescreen",
         "fps60": "patch=1,EE,00234120,word,00000000 // 60 FPS",
@@ -302,7 +304,7 @@
       "players": "1 - 2 Jogadores",
       "requirementTier": "Leve",
       "requirementDescription": "Versão americana completa (NTSC-U). Roda com alta taxa de quadros e estabilidade em praticamente qualquer computador.",
-      "coverUrl": "https://raw.githubusercontent.com/xlenore/ps2-covers/main/covers/default/SLUS-21065.jpg",
+      "coverUrl": "/covers/SLUS-21065.jpg",
       "cheats": {
         "widescreen": "patch=1,EE,0056FB44,word,3F5B8D14 // 16:9 Widescreen Nativo\npatch=1,EE,0056FBF4,word,3F154000\npatch=1,EE,001CCAF4,word,0C0ED18B",
         "fps60": "patch=1,EE,0021A520,word,00000000 // 60 FPS",
@@ -361,7 +363,7 @@
       "players": "1 - 4 Jogadores",
       "requirementTier": "Leve",
       "requirementDescription": "Motor AKI altamente otimizado. Roda a 60 FPS liso em praticamente qualquer computador fraco ou notebook.",
-      "coverUrl": "https://raw.githubusercontent.com/xlenore/ps2-covers/main/covers/default/SLUS-20927.jpg",
+      "coverUrl": "/covers/SLUS-20927.jpg",
       "cheats": {
         "widescreen": "patch=1,EE,0028A1C0,word,3F400000 // 16:9 Widescreen",
         "fps60": "patch=1,EE,0025D230,word,00000000 // 60 FPS",
@@ -398,7 +400,7 @@
       "players": "1 Jogador",
       "requirementTier": "Pesado",
       "requirementDescription": "O jogo que levava o hardware do PS2 ao limite absoluto com iluminação HDR dinâmica. Para computadores modestos, o 'Modo PC Fraco' com Frame Skip 1 e resolução 0.75x é fundamental.",
-      "coverUrl": "https://raw.githubusercontent.com/xlenore/ps2-covers/main/covers/default/SCUS-97472.jpg",
+      "coverUrl": "/covers/SCUS-97472.jpg",
       "cheats": {
         "widescreen": "patch=1,EE,00244710,word,3F400000 // 16:9 Widescreen",
         "fps60": "patch=1,EE,001B9520,word,00000000 // 60 FPS Unlock",
@@ -431,7 +433,7 @@
       "players": "1 - 2 Jogadores",
       "requirementTier": "Médio",
       "requirementDescription": "Excelente motor de 60 quadros por segundo. Mantém 60 FPS estáveis mesmo em CPUs dual-core.",
-      "coverUrl": "https://raw.githubusercontent.com/xlenore/ps2-covers/main/covers/default/SLUS-21002.jpg",
+      "coverUrl": "/covers/SLUS-21002.jpg",
       "cheats": {
         "widescreen": "patch=1,EE,002DA190,word,3F400000 // 16:9 Widescreen",
         "fps60": "patch=1,EE,00210010,word,00000000 // 60 FPS",
@@ -468,7 +470,7 @@
       "players": "1 Jogador",
       "requirementTier": "Leve",
       "requirementDescription": "Combates por turnos não exigem reflexos imediatos e o motor é leve. Perfeito para qualquer PC fraco ou notebook básico.",
-      "coverUrl": "https://raw.githubusercontent.com/xlenore/ps2-covers/main/covers/default/SLUS-20312.jpg",
+      "coverUrl": "/covers/SLUS-20312.jpg",
       "cheats": {
         "widescreen": "patch=1,EE,00282120,word,3F400000 // 16:9 Widescreen",
         "fps60": "patch=1,EE,00184420,word,00000000 // 60 FPS",
@@ -503,7 +505,7 @@
       "players": "1 Jogador",
       "requirementTier": "Pesado",
       "requirementDescription": "Destruição pesada de cenário e efeitos de fumaça volumétrica. Recomenda-se ativar 'Modo PC Fraco' (Frame Skip 1) em notebooks com placa integrada.",
-      "coverUrl": "https://raw.githubusercontent.com/xlenore/ps2-covers/main/covers/default/SLUS-21376.jpg",
+      "coverUrl": "/covers/SLUS-21376.jpg",
       "cheats": {
         "widescreen": "patch=1,EE,0025A1A0,word,3F400000 // 16:9 Widescreen",
         "fps60": "patch=1,EE,001FD320,word,00000000 // 60 FPS",
@@ -536,7 +538,7 @@
       "players": "1 - 2 Jogadores",
       "requirementTier": "Médio",
       "requirementDescription": "Excelente desempenho no navegador, compatibilidade alta e arenas épicas.",
-      "coverUrl": "https://raw.githubusercontent.com/xlenore/ps2-covers/main/covers/default/SLUS-21287.jpg",
+      "coverUrl": "/covers/SLUS-21287.jpg",
       "cheats": {
         "widescreen": "patch=1,EE,002BA310,word,3F400000 // 16:9 Widescreen",
         "fps60": "patch=1,EE,00201100,word,00000000 // 60 FPS",
@@ -569,7 +571,7 @@
       "players": "1 - 2 Jogadores",
       "requirementTier": "Leve",
       "requirementDescription": "Excelente para jogar em cooperativo para 2 pessoas. Roda liso a 60 FPS.",
-      "coverUrl": "https://raw.githubusercontent.com/xlenore/ps2-covers/main/covers/default/SLUS-21087.jpg",
+      "coverUrl": "/covers/SLUS-21087.jpg",
       "cheats": {
         "widescreen": "patch=1,EE,002A1910,word,3F400000 // 16:9 Widescreen",
         "fps60": "patch=1,EE,0021A110,word,00000000 // 60 FPS",
@@ -606,7 +608,7 @@
       "players": "1 Jogador",
       "requirementTier": "Médio",
       "requirementDescription": "Física ativa e personagens animados. Ótima performance com perfil Equilibrado.",
-      "coverUrl": "https://raw.githubusercontent.com/xlenore/ps2-covers/main/covers/default/SLUS-21361.jpg",
+      "coverUrl": "/covers/SLUS-21361.jpg",
       "cheats": {
         "widescreen": "patch=1,EE,0026C110,word,3F400000 // 16:9 Widescreen",
         "fps60": "patch=1,EE,00218820,word,00000000 // 60 FPS",
@@ -644,7 +646,7 @@
       "players": "1 - 2 Jogadores",
       "requirementTier": "Médio",
       "requirementDescription": "Física precisa de pneus e pistas detalhadas. Roda com 60 FPS estáveis com gráficos 1x.",
-      "coverUrl": "https://raw.githubusercontent.com/xlenore/ps2-covers/main/covers/default/SLUS-20002.jpg",
+      "coverUrl": "/covers/SLUS-20002.jpg",
       "cheats": {
         "widescreen": "patch=1,EE,0021A580,word,3F400000 // 16:9 Widescreen",
         "fps60": "patch=1,EE,001A4510,word,00000000 // 60 FPS",
@@ -671,7 +673,7 @@
       "players": "1 Jogador",
       "requirementTier": "Leve",
       "requirementDescription": "Mundo de desenho animado colorido e leve. Roda fluido em qualquer PC fraco.",
-      "coverUrl": "https://raw.githubusercontent.com/xlenore/ps2-covers/main/covers/default/SLUS-20672.jpg",
+      "coverUrl": "/covers/SLUS-20672.jpg",
       "cheats": {
         "widescreen": "patch=1,EE,0028A110,word,3F400000 // 16:9 Widescreen",
         "fps60": "patch=1,EE,001F0020,word,00000000 // 60 FPS",
@@ -702,7 +704,7 @@
       "players": "1 - 2 Jogadores",
       "requirementTier": "Leve",
       "requirementDescription": "Jogo leve e clássico. Roda com facilidade a 60 FPS em qualquer computador modesto.",
-      "coverUrl": "https://raw.githubusercontent.com/xlenore/ps2-covers/main/covers/default/SLUS-20565.jpg",
+      "coverUrl": "/covers/SLUS-20565.jpg",
       "cheats": {
         "widescreen": "patch=1,EE,002231A0,word,3F400000 // 16:9 Widescreen",
         "fps60": "patch=1,EE,00194410,word,00000000 // 60 FPS",
@@ -729,7 +731,7 @@
       "players": "1 - 4 Jogadores",
       "requirementTier": "Leve",
       "requirementDescription": "Título de lançamento do PS2. Extremamente leve e roda a 60 FPS cravados em qualquer equipamento.",
-      "coverUrl": "https://raw.githubusercontent.com/xlenore/ps2-covers/main/covers/default/SLUS-20014.jpg",
+      "coverUrl": "/covers/SLUS-20014.jpg",
       "cheats": {
         "widescreen": "patch=1,EE,001E3100,word,3F400000 // 16:9 Widescreen",
         "fps60": "patch=1,EE,00181120,word,00000000 // 60 FPS",
@@ -756,7 +758,7 @@
       "players": "1 - 2 Jogadores",
       "requirementTier": "Médio",
       "requirementDescription": "Exige sincronia de áudio precisa. Use latência de áudio 'Equilibrada' ou 'Baixa' para notas no compasso correto.",
-      "coverUrl": "https://raw.githubusercontent.com/xlenore/ps2-covers/main/covers/default/SLUS-21503.jpg",
+      "coverUrl": "/covers/SLUS-21503.jpg",
       "cheats": {
         "widescreen": "patch=1,EE,002A1900,word,3F400000 // 16:9 Widescreen",
         "fps60": "patch=1,EE,0024A120,word,00000000 // 60 FPS",
@@ -831,7 +833,7 @@
       "players": "1 - 4 Jogadores",
       "requirementTier": "Equilibrado (60 FPS)",
       "requirementDescription": "Clássico atemporal do Nintendo GameCube com sistema de duplas por kart. Roda a 60 FPS com áudio DSP estéreo no Dolphin.",
-      "coverUrl": "https://raw.githubusercontent.com/libretro-thumbnails/Nintendo_-_GameCube/master/Named_Boxarts/Mario%20Kart%20-%20Double%20Dash!!%20(USA).png",
+      "coverUrl": "/covers/mariokart-doubledash.png",
       "cheats": {
         "widescreen": "Nativo 16:9",
         "fps60": "60 FPS nativo",
@@ -847,7 +849,53 @@
         ]
       },
       "isPs2Exclusive": false,
-      "exclusiveRunnerTip": "Executado através do Dolphin Desktop com Direct3D 11/12 e suporte a até 4 controles simultâneos."
+      "exclusiveRunnerTip": "Executado através do Dolphin Desktop com Direct3D 11/12 e suporte a até 4 controles simultâneos.",
+      "platform": "Nintendo GameCube",
+      "runner": "dolphin"
+    },
+    {
+      "serial": "AGB-BDBE",
+      "aliases": [
+        "BDBE",
+        "AGB-BDBE-USA",
+        "DRAGONBALL-ADVANCED-ADVENTURE",
+        "Dragon Ball - Advanced Adventure (USA)"
+      ],
+      "title": "Dragon Ball: Advanced Adventure",
+      "cleanTitle": "Dragon Ball Advanced Adventure",
+      "genre": "Aventura / Luta 2D",
+      "year": 2004,
+      "developer": "Dimps / Banpresto",
+      "players": "1 - 2 Jogadores",
+      "requirementTier": "Leve (60 FPS)",
+      "requirementDescription": "A lendária jornada do pequeno Goku em busca das Esferas do Dragão com combate fluido a 60 FPS cravados no mGBA.",
+      "coverUrl": "/covers/dragonball-advanced-adventure.png",
+      "cheats": {
+        "widescreen": "Nativo GBA",
+        "fps60": "60 FPS Nativo",
+        "codes": [
+          {
+            "name": "Vida Infinita (Goku)",
+            "code": "020005C8:00A0"
+          },
+          {
+            "name": "Ki / Energia Máxima",
+            "code": "020005C9:00A0"
+          },
+          {
+            "name": "Voo Ilimitado / Nuvem Voadora",
+            "code": "020005CB:0005"
+          },
+          {
+            "name": "Desbloquear Todos os Personagens",
+            "code": "020006E8:FFFF"
+          }
+        ]
+      },
+      "isPs2Exclusive": false,
+      "platform": "Game Boy Advance",
+      "runner": "mgba",
+      "exclusiveRunnerTip": "Executado através do mGBA com áudio estéreo cristalino, filtros nítidos e suporte a controle completo."
     }
   ]
 }

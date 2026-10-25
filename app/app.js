@@ -355,6 +355,24 @@ class SoundFX {
       osc.stop(this.ctx.currentTime + 0.08);
     } catch {}
   }
+
+  static playBlip() {
+    try {
+      this.init();
+      if (!this.ctx) return;
+      const osc = this.ctx.createOscillator();
+      const gain = this.ctx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(587.33, this.ctx.currentTime); // D5
+      osc.frequency.exponentialRampToValueAtTime(880, this.ctx.currentTime + 0.04); // A5
+      gain.gain.setValueAtTime(0.04, this.ctx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, this.ctx.currentTime + 0.04);
+      osc.connect(gain);
+      gain.connect(this.ctx.destination);
+      osc.start();
+      osc.stop(this.ctx.currentTime + 0.04);
+    } catch {}
+  }
 }
 
 // ==================== TOAST NOTIFICATION FLUTUANTE ====================
@@ -452,6 +470,8 @@ const dom = {
   btnRefreshLibrary: document.getElementById('btnRefreshLibrary'),
   btnOpenPcFolder: document.getElementById('btnOpenPcFolder'),
   btnOpenLibraryFolder: document.getElementById('btnOpenLibraryFolder'),
+  btnLaunchEsDe: document.getElementById('btnLaunchEsDe'),
+  btnLaunchEsDeCatalog: document.getElementById('btnLaunchEsDeCatalog'),
 
   // Drive View
   driveDeviceName: document.getElementById('driveDeviceName'),
@@ -950,9 +970,19 @@ function renderSidebarGames() {
       </div>
     `;
 
-    // Áudio retrô ao passar o mouse ou focar pelo teclado (Limiar de Doherty: < 10ms)
-    card.addEventListener('mouseenter', () => SoundFX.playHover());
-    card.addEventListener('focus', () => SoundFX.playHover());
+    // Áudio retrô e sincronização do banner de destaque ao passar o mouse ou focar (Limiar de Doherty: < 10ms)
+    card.addEventListener('mouseenter', () => {
+      SoundFX.playHover();
+      dom.gameGrid.querySelectorAll('.game-card-cohesive').forEach(c => c.classList.remove('game-card-focused'));
+      card.classList.add('game-card-focused');
+      updateHeroShowcase(game);
+    });
+    card.addEventListener('focus', () => {
+      SoundFX.playHover();
+      dom.gameGrid.querySelectorAll('.game-card-cohesive').forEach(c => c.classList.remove('game-card-focused'));
+      card.classList.add('game-card-focused');
+      updateHeroShowcase(game);
+    });
 
     // Clique no botão ou no card
     const playBtn = card.querySelector('.btn-card-launch');
@@ -1296,29 +1326,95 @@ function displayCheatsForGame(gameId) {
   dom.btnOpenGameHacking.href = game.cheatsSearchUrl;
 }
 
-// ==================== GAMEPAD API & CONTROLES ====================
+// ==================== GAMEPAD API & NAVEGAÇÃO DE CONSOLE ====================
+function toggleEcoMode() {
+  if (state.profiler.activePreset === 'balanced') {
+    state.profiler.applyPreset('eco');
+    showToast('🟢 Modo PC Fraco Ativado: 0.75x Resolução • 60 FPS');
+  } else if (state.profiler.activePreset === 'eco') {
+    state.profiler.applyPreset('potato');
+    showToast('🚀 Modo Batata Ativado: 0.5x Resolução • Ultra Leve');
+  } else {
+    state.profiler.applyPreset('balanced');
+    showToast('🔵 Modo Equilibrado: Resolução Nativa 1.0x');
+  }
+  applyGraphicsToCanvas();
+  updateProfilerUI();
+}
+
 function setupGamepadSupport() {
   window.addEventListener('gamepadconnected', (e) => {
     dom.gamepadDetectedBadge.textContent = `Controle conectado: ${e.gamepad.id}`;
     dom.gamepadDetectedBadge.style.color = '#34d399';
+    showToast(`🎮 Controle Conectado: ${e.gamepad.id.slice(0, 24)}`);
   });
 
   window.addEventListener('gamepaddisconnected', () => {
     dom.gamepadDetectedBadge.textContent = 'Nenhum controle detectado';
     dom.gamepadDetectedBadge.style.color = 'var(--text-muted)';
+    showToast('🔌 Controle desconectado');
   });
 
-  const buttonLabels = ['✕ Cruz', '○ Círculo', '□ Quadrado', '△ Triângulo', 'L1', 'R1', 'L2', 'R2', 'Select', 'Start', 'L3', 'R3', 'Cima', 'Baixo', 'Esquerda', 'Direita'];
+  const buttonLabels = ['✕ Cruz / A', '○ Círculo / B', '□ Quadrado / X', '△ Triângulo / Y', 'L1 / LB', 'R1 / RB', 'L2 / LT', 'R2 / RT', 'Select / Back', 'Start', 'L3', 'R3', 'Cima', 'Baixo', 'Esquerda', 'Direita'];
   dom.gamepadVisualButtons.innerHTML = buttonLabels.map((lbl, idx) => `
     <div id="btnVisual${idx}" style="padding:0.45rem; text-align:center; background:rgba(20,36,62,0.6); border:1px solid var(--border-subtle); border-radius:6px; font-size:0.75rem;">
       ${lbl}
     </div>
   `).join('');
 
+  let lastNavMove = 0;
+  const prevBtnPressed = new Map();
+  const consoleCategories = ['all', 'ps2', 'psp', 'gamecube', 'genesis', 'snes', 'gba', 'nes', 'pc'];
+  let currentCategoryIndex = 0;
+
+  function cycleConsoleCategory(direction) {
+    currentCategoryIndex = (currentCategoryIndex + direction + consoleCategories.length) % consoleCategories.length;
+    const targetTag = consoleCategories[currentCategoryIndex];
+    state.selectedGenre = targetTag;
+    
+    // Atualiza chip ativo
+    dom.genreChips.forEach(chip => {
+      const match = chip.dataset.genre === targetTag;
+      chip.classList.toggle('active', match);
+    });
+
+    SoundFX.playBlip();
+    filterAndRenderGames();
+    const label = targetTag === 'all' ? 'TODOS OS JOGOS' : targetTag.toUpperCase();
+    showToast(`🎮 Filtro de Console: ${label}`);
+  }
+
+  function getActiveCards() {
+    return Array.from(dom.gameGrid.querySelectorAll('.game-card-cohesive'));
+  }
+
+  function setGamepadFocus(newIndex) {
+    const cards = getActiveCards();
+    if (cards.length === 0) return;
+    
+    if (newIndex < 0) newIndex = cards.length - 1;
+    if (newIndex >= cards.length) newIndex = 0;
+
+    cards.forEach((c, idx) => {
+      const isTarget = idx === newIndex;
+      c.classList.toggle('game-card-focused', isTarget);
+      if (isTarget) {
+        c.focus();
+        c.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      }
+    });
+
+    if (state.filteredGames[newIndex]) {
+      updateHeroShowcase(state.filteredGames[newIndex]);
+      SoundFX.playHover();
+    }
+  }
+
   function pollGamepads() {
     const gamepads = navigator.getGamepads ? navigator.getGamepads() : [];
     const gp = gamepads[0];
     if (gp) {
+      // 1. Visualizer no menu de controles
       gp.buttons.forEach((b, idx) => {
         const el = document.getElementById(`btnVisual${idx}`);
         if (el) {
@@ -1333,6 +1429,104 @@ function setupGamepadSupport() {
           }
         }
       });
+
+      // 2. Navegação de Console no Menu
+      const now = performance.now();
+      const isPlayerActive = state.gameRunning && dom.webPlayerModal && !dom.webPlayerModal.hidden;
+
+      if (!isPlayerActive) {
+        // Analógico esquerdo e D-pad Left/Right
+        const axisX = gp.axes[0] || 0;
+        const dpadLeft = gp.buttons[14]?.pressed;
+        const dpadRight = gp.buttons[15]?.pressed;
+
+        if (now - lastNavMove > 180) {
+          const cards = getActiveCards();
+          const currentIdx = cards.findIndex(c => c.classList.contains('game-card-focused'));
+          const safeIdx = currentIdx === -1 ? 0 : currentIdx;
+
+          if (axisX < -0.45 || dpadLeft) {
+            lastNavMove = now;
+            setGamepadFocus(safeIdx - 1);
+            if (gp.vibrationActuator?.playEffect) {
+              gp.vibrationActuator.playEffect('dual-rumble', { startDelay: 0, duration: 25, weakMagnitude: 0.3, strongMagnitude: 0.1 }).catch(() => {});
+            }
+          } else if (axisX > 0.45 || dpadRight) {
+            lastNavMove = now;
+            setGamepadFocus(safeIdx + 1);
+            if (gp.vibrationActuator?.playEffect) {
+              gp.vibrationActuator.playEffect('dual-rumble', { startDelay: 0, duration: 25, weakMagnitude: 0.3, strongMagnitude: 0.1 }).catch(() => {});
+            }
+          }
+        }
+
+        // Leitura de botões (disparo único no clique inicial)
+        const isPressed = (btnIdx) => {
+          const b = gp.buttons[btnIdx];
+          const pressed = b ? (b.pressed || b.value > 0.5) : false;
+          const wasPressed = prevBtnPressed.get(btnIdx) || false;
+          prevBtnPressed.set(btnIdx, pressed);
+          return pressed && !wasPressed;
+        };
+
+        // [A] ou ✕ (Botão 0): Jogar jogo selecionado
+        if (isPressed(0)) {
+          if (dom.gameModalBackdrop && !dom.gameModalBackdrop.hidden) {
+            dom.btnModalPlay.click();
+          } else {
+            const cards = getActiveCards();
+            const currentIdx = cards.findIndex(c => c.classList.contains('game-card-focused'));
+            if (currentIdx !== -1 && state.filteredGames[currentIdx]) {
+              SoundFX.playSelect();
+              launchGame(state.filteredGames[currentIdx]);
+            } else if (state.featuredGame) {
+              SoundFX.playSelect();
+              launchGame(state.featuredGame);
+            }
+          }
+        }
+
+        // [B] ou ○ (Botão 1): Voltar / Fechar Modal
+        if (isPressed(1)) {
+          if (dom.gameModalBackdrop && !dom.gameModalBackdrop.hidden) {
+            closeGameModal();
+          } else if (dom.emulatorsModalBackdrop && !dom.emulatorsModalBackdrop.hidden) {
+            closeEmulatorsModal();
+          }
+        }
+
+        // [X] ou □ (Botão 2): Abrir Detalhes do Jogo Selecionado
+        if (isPressed(2)) {
+          const cards = getActiveCards();
+          const currentIdx = cards.findIndex(c => c.classList.contains('game-card-focused'));
+          if (currentIdx !== -1 && state.filteredGames[currentIdx]) {
+            openGameModal(state.filteredGames[currentIdx]);
+          }
+        }
+
+        // [Y] ou △ (Botão 3): Alternar Modo Batata / Eco Mode
+        if (isPressed(3)) {
+          toggleEcoMode();
+        }
+
+        // [L1 / LB] (Botão 4): Trocar para Console Anterior
+        if (isPressed(4)) {
+          cycleConsoleCategory(-1);
+        }
+
+        // [R1 / RB] (Botão 5): Trocar para Próximo Console
+        if (isPressed(5)) {
+          cycleConsoleCategory(1);
+        }
+
+        // [Start] (Botão 9): Jogar jogo em destaque
+        if (isPressed(9)) {
+          if (state.featuredGame) {
+            SoundFX.playSelect();
+            launchGame(state.featuredGame);
+          }
+        }
+      }
     }
     requestAnimationFrame(pollGamepads);
   }
@@ -1379,6 +1573,22 @@ function setupEventListeners() {
   dom.btnOpenPcFolder?.addEventListener('click', () => fetch('/api/open-folder?type=pc-games'));
   dom.btnOpenLibraryFolder?.addEventListener('click', () => fetch('/api/open-folder?type=library'));
 
+  // Lançador EmulationStation Desktop Edition
+  const handleLaunchEsDe = async () => {
+    try {
+      SoundFX.playSelect();
+      showToast('📺 Iniciando EmulationStation Desktop Edition em tela cheia...');
+      const res = await fetch('/api/launch-es-de');
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || 'Erro ao iniciar');
+      showToast('🚀 EmulationStation ativo!');
+    } catch (err) {
+      showToast(`⚠️ ${err.message}`);
+    }
+  };
+  dom.btnLaunchEsDe?.addEventListener('click', handleLaunchEsDe);
+  dom.btnLaunchEsDeCatalog?.addEventListener('click', handleLaunchEsDe);
+
   // Navegação entre o player (topo) e o painel de configurações
   const btnScrollToSettings = document.getElementById('btnScrollToSettings');
   const btnScrollDown = document.getElementById('btnScrollDown');
@@ -1420,17 +1630,7 @@ function setupEventListeners() {
     }
   });
 
-  dom.btnToggleEcoMode.addEventListener('click', () => {
-    if (state.profiler.activePreset === 'balanced') {
-      state.profiler.applyPreset('eco');
-    } else if (state.profiler.activePreset === 'eco') {
-      state.profiler.applyPreset('potato');
-    } else {
-      state.profiler.applyPreset('balanced');
-    }
-    applyGraphicsToCanvas();
-    updateProfilerUI();
-  });
+  dom.btnToggleEcoMode.addEventListener('click', toggleEcoMode);
 
   dom.btnWidescreenToggle.addEventListener('click', () => {
     const isNowWide = dom.canvasWrap.classList.toggle('widescreen-mode');
@@ -1521,20 +1721,30 @@ function setupEventListeners() {
         else if (e.key === 'ArrowDown') nextIndex = Math.min(focusedIndex + cols, cards.length - 1);
         else if (e.key === 'ArrowUp') nextIndex = Math.max(focusedIndex - cols, 0);
       }
+      cards.forEach((c, idx) => c.classList.toggle('game-card-focused', idx === nextIndex));
       cards[nextIndex].focus();
+      cards[nextIndex].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      if (state.filteredGames[nextIndex]) {
+        updateHeroShowcase(state.filteredGames[nextIndex]);
+      }
       SoundFX.playHover();
       return;
     }
 
     if (e.key === 'Enter') {
-      if (focusedIndex !== -1) {
-        const gameId = cards[focusedIndex].dataset.id;
+      const activeIdx = cards.findIndex(c => c.classList.contains('game-card-focused') || c === document.activeElement);
+      if (activeIdx !== -1) {
+        const gameId = cards[activeIdx].dataset.id;
         const targetGame = state.games.find(g => g.id === gameId);
         if (targetGame) {
           SoundFX.playSelect();
           launchGame(targetGame);
         }
       }
+    }
+
+    if (e.key === 'e' || e.key === 'E') {
+      toggleEcoMode();
     }
   });
 

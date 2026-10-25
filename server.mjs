@@ -167,6 +167,10 @@ function findCuratedMetadata(title, serial) {
 function generateCoverUrl(serial, title) {
   if (serial) {
     const normSerial = serial.toUpperCase().replace('_', '-').replace('.', '');
+    const localJpg = path.join(WEB_ROOT, 'covers', `${normSerial}.jpg`);
+    const localPng = path.join(WEB_ROOT, 'covers', `${normSerial}.png`);
+    if (existsSync(localJpg)) return `/covers/${normSerial}.jpg`;
+    if (existsSync(localPng)) return `/covers/${normSerial}.png`;
     return `https://raw.githubusercontent.com/xlenore/ps2-covers/main/covers/default/${normSerial}.jpg`;
   }
   return null;
@@ -336,7 +340,15 @@ function publicGame(game) {
   const year = curated?.year || sys.year;
   const requirementTier = curated?.requirementTier || sys.requirementTier;
   const requirementDesc = curated?.requirementDescription || sys.requirementDesc;
-  const coverUrl = curated?.coverUrl || generateCoverUrl(serial, title);
+  let coverUrl = curated?.coverUrl || generateCoverUrl(serial, title);
+  if (serial) {
+    const normSerial = serial.toUpperCase().replace('_', '-').replace('.', '');
+    if (existsSync(path.join(WEB_ROOT, 'covers', `${normSerial}.jpg`))) {
+      coverUrl = `/covers/${normSerial}.jpg`;
+    } else if (existsSync(path.join(WEB_ROOT, 'covers', `${normSerial}.png`))) {
+      coverUrl = `/covers/${normSerial}.png`;
+    }
+  }
   const cheats = curated?.cheats || null;
 
   const compatibility = compatibilityCache[game.id] ?? {
@@ -1001,6 +1013,22 @@ const server = createServer(async (request, response) => {
     return;
   }
 
+  // Endpoint: Executar EmulationStation Desktop Edition (Interface Arcade TV)
+  if (url.pathname === '/api/launch-es-de') {
+    const esExe = path.join(DESKTOP_RUNNER_DIR, 'es-de', 'ES-DE', 'ES-DE.exe');
+    if (!existsSync(esExe)) {
+      sendJson(response, { error: 'EmulationStation Desktop Edition não encontrado.' }, 404);
+      return;
+    }
+    try {
+      exec(`start "" "${esExe}" --fullscreen`, { cwd: path.dirname(esExe) });
+      sendJson(response, { success: true, message: 'Iniciando EmulationStation Desktop Edition em tela cheia...' });
+    } catch (err) {
+      sendJson(response, { error: err.message }, 500);
+    }
+    return;
+  }
+
   // Endpoint: Executar jogo nativo de PC ou com acelerador desktop
   if (url.pathname.startsWith('/api/launch-native/') || url.pathname.startsWith('/api/desktop-runner/launch/')) {
     const gameId = url.pathname.replace(/^\/api\/(launch-native|desktop-runner\/launch)\//, '').trim();
@@ -1070,7 +1098,10 @@ const server = createServer(async (request, response) => {
       const ppssppPath = path.join(DESKTOP_RUNNER_DIR, 'ppsspp', 'PPSSPPWindows64.exe');
       const dolphinPath = path.join(DESKTOP_RUNNER_DIR, 'dolphin', 'Dolphin.exe');
 
+      const esDePath = path.join(DESKTOP_RUNNER_DIR, 'es-de', 'ES-DE', 'ES-DE.exe');
+
       const emulators = [
+        { id: 'es-de', name: 'EmulationStation Desktop Edition (Interface TV)', installed: existsSync(esDePath), path: esDePath },
         { id: 'pcsx2', name: 'PlayStation 2 (PCSX2 1.6.0)', installed: existsSync(pcsx2Path), path: pcsx2Path },
         { id: 'dolphin', name: 'Nintendo GameCube / Wii (Dolphin)', installed: existsSync(dolphinPath), path: dolphinPath },
         { id: 'blastem', name: 'Sega Mega Drive (BlastEm)', installed: existsSync(blastemPath), path: blastemPath },

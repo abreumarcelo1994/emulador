@@ -210,6 +210,21 @@ body {
   box-shadow: 0 0 12px var(--neon-cyan-glow);
 }
 
+.btn-action-top.btn-arcade-accent {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.28) 0%, rgba(0, 210, 255, 0.2) 100%);
+  border-color: var(--neon-purple);
+  color: #fff;
+  box-shadow: 0 0 16px var(--neon-purple-glow);
+  font-weight: 700;
+}
+
+.btn-action-top.btn-arcade-accent:hover {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.5) 0%, rgba(0, 210, 255, 0.4) 100%);
+  border-color: #fff;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 0 24px rgba(168, 85, 247, 0.6);
+}
+
 /* ==================== HERO SHOWCASE ("CONTINUAR JOGANDO") ==================== */
 /* Efeito Zeigarnik, Regra do Pico-Fim & Lei de Fitts */
 .hero-showcase-container {
@@ -569,6 +584,19 @@ body {
   transform: translateY(-1px);
 }
 
+.btn-tag-action.btn-arcade-glow {
+  background: rgba(168, 85, 247, 0.15);
+  border-color: rgba(168, 85, 247, 0.4);
+  color: #d8b4fe;
+}
+
+.btn-tag-action.btn-arcade-glow:hover {
+  background: rgba(168, 85, 247, 0.3);
+  border-color: #a855f7;
+  color: #fff;
+  box-shadow: 0 0 12px rgba(168, 85, 247, 0.4);
+}
+
 /* CARROSSEL HORIZONTAL DE JOGOS & GRID COM SCROLL SNAP */
 .games-carousel-track {
   display: flex;
@@ -644,12 +672,84 @@ body {
 }
 
 .game-card-cohesive:hover,
-.game-card-cohesive:focus-visible {
-  transform: translateY(-6px) scale(1.02);
+.game-card-cohesive:focus-visible,
+.game-card-cohesive.game-card-focused {
+  transform: translateY(-8px) scale(1.04);
   background: var(--bg-card-hover);
   border-color: var(--neon-cyan);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6), 0 0 20px var(--neon-cyan-glow);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.7), 0 0 24px var(--neon-cyan-glow);
   outline: none;
+  z-index: 5;
+}
+
+/* ==================== GAMEPAD HUD HINTS (PADRÃO CONSOLE JAKOB) ==================== */
+.gamepad-hud-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  padding: 0.75rem 1.4rem;
+  background: rgba(10, 16, 28, 0.95);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-pill);
+  backdrop-filter: blur(16px);
+  margin-top: 0.4rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
+}
+
+.hud-hint-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.kbd-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  height: 24px;
+  padding: 0 7px;
+  border-radius: 50%;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 800;
+  background: #1e293b;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.kbd-btn.pill {
+  border-radius: 6px;
+}
+
+.kbd-btn.btn-a {
+  background: #059669;
+  border-color: #34d399;
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.4);
+}
+
+.kbd-btn.btn-b {
+  background: #dc2626;
+  border-color: #f87171;
+  box-shadow: 0 0 8px rgba(239, 68, 68, 0.4);
+}
+
+.kbd-btn.btn-x {
+  background: #2563eb;
+  border-color: #60a5fa;
+  box-shadow: 0 0 8px rgba(37, 99, 235, 0.4);
+}
+
+.kbd-btn.btn-y {
+  background: #d97706;
+  border-color: #fbbf24;
+  box-shadow: 0 0 8px rgba(245, 158, 11, 0.4);
 }
 
 /* ÁREA DA CAPA (PROPORÇÃO 2:3 VERTICAL) */
