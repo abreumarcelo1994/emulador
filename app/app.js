@@ -417,6 +417,7 @@ const dom = {
 
   // Player Elements (Modal Theatre WebAssembly)
   webPlayerModal: document.getElementById('webPlayerModal'),
+  theatreCoverArt: document.getElementById('theatreCoverArt'),
   btnCloseTheatre: document.getElementById('btnCloseTheatre'),
   playerContainer: document.getElementById('playerContainer'),
   outputCanvas: document.getElementById('outputCanvas'),
@@ -443,6 +444,8 @@ const dom = {
 
   // Catalog & Search
   gameGrid: document.getElementById('gameGrid'),
+  btnCarouselPrev: document.getElementById('btnCarouselPrev'),
+  btnCarouselNext: document.getElementById('btnCarouselNext'),
   librarySearch: document.getElementById('librarySearch'),
   genreChips: document.querySelectorAll('.console-chip, .genre-chip'),
   manualFilePicker: document.getElementById('manualFilePicker'),
@@ -616,6 +619,9 @@ async function launchGame(imageOrGame) {
     dom.nowPlayingTitle.textContent = gameTitle;
     dom.nowPlayingTier.textContent = tier;
     dom.nowPlayingTier.className = `now-playing-tier tier-${tier.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")}`;
+    if (dom.theatreCoverArt) {
+      dom.theatreCoverArt.src = (imageOrGame && imageOrGame.coverUrl) ? imageOrGame.coverUrl : '/covers/ps2_default.jpg';
+    }
 
     dom.canvasStatusText.textContent = `Carregando ${gameTitle}...`;
     dom.canvasSubText.textContent = 'Inicializando subsistemas MIPS R5900, VU0/VU1 e sintetizador gráfico GS...';
@@ -1531,6 +1537,20 @@ function setupEventListeners() {
       }
     }
   });
+
+  // Navegação do Carrossel por botões (◀ e ▶)
+  if (dom.btnCarouselPrev) {
+    dom.btnCarouselPrev.addEventListener('click', () => {
+      SoundFX.playHover();
+      dom.gameGrid.scrollBy({ left: -460, behavior: 'smooth' });
+    });
+  }
+  if (dom.btnCarouselNext) {
+    dom.btnCarouselNext.addEventListener('click', () => {
+      SoundFX.playHover();
+      dom.gameGrid.scrollBy({ left: 460, behavior: 'smooth' });
+    });
+  }
 
   // Modal
   dom.btnModalClose.addEventListener('click', closeGameModal);

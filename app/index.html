@@ -149,23 +149,29 @@
       </nav>
     </section>
 
-    <!-- ==================== CATÁLOGO PRINCIPAL DE JOGOS ==================== -->
-    <!-- Lei de Prägnanz (Grid simétrico), Proximidade, Semelhança & Conectividade Uniforme -->
+    <!-- ==================== CATÁLOGO PRINCIPAL DE JOGOS (CARROSSEL HORIZONTAL) ==================== -->
+    <!-- Lei de Prägnanz (Simetria), Proximidade, Semelhança & Conectividade Uniforme -->
     <section class="catalog-section" aria-label="Catálogo de Jogos">
       <div class="catalog-header-row">
         <h3 class="catalog-section-title">
           <span>Coleção de Jogos</span>
-          <span class="catalog-hint">Navegue pelas setas do teclado e aperte Enter</span>
+          <span class="catalog-hint">← → Navegue pelas setas ou arraste para rolar</span>
         </h3>
         <div class="catalog-sort-group">
+          <button type="button" class="btn-carousel-nav btn-carousel-prev" id="btnCarouselPrev" title="Anterior">
+            <span>◀</span>
+          </button>
+          <button type="button" class="btn-carousel-nav btn-carousel-next" id="btnCarouselNext" title="Próximo">
+            <span>▶</span>
+          </button>
           <button type="button" class="btn-tag-action" id="btnOpenPcFolder">
             <span>💻</span> Pasta Jogos PC
           </button>
         </div>
       </div>
 
-      <!-- GRID DE CARDS RENDERIZADO DINAMICAMENTE -->
-      <div class="games-grid-container" id="gameGrid">
+      <!-- CARROSSEL HORIZONTAL DE CARDS -->
+      <div class="games-carousel-track" id="gameGrid">
         <!-- Renderizado pelo app.js -->
       </div>
     </section>
@@ -372,46 +378,59 @@ Escolha um jogo acima para carregar cheats e trapaças...
       </div>
     </section>
 
-    <!-- ==================== PLAYER THEATRE MODAL (WEB PLAYER WASM) ==================== -->
-    <!-- Lei de Tesler: O player web só aparece quando requisitado, sem poluir a tela principal -->
+    <!-- ==================== PLAYER THEATRE MODAL (SPLIT: CAPA + PLAYER) ==================== -->
+    <!-- Lei de Tesler: O player web só aparece quando requisitado -->
+    <!-- Layout Split: Capa do jogo à esquerda, Player WASM à direita -->
     <div class="theatre-modal-backdrop" id="webPlayerModal" hidden>
-      <div class="theatre-modal-container">
-        <div class="player-topbar">
-          <div class="now-playing-info">
-            <span class="now-playing-title" id="nowPlayingTitle">Nenhum Jogo em Execução</span>
+      <div class="theatre-split-container" id="theatreSplitContainer">
+
+        <!-- LADO ESQUERDO: CAPA E INFO DO JOGO -->
+        <aside class="theatre-cover-side" id="theatreCoverSide">
+          <div class="theatre-cover-art-wrap">
+            <img class="theatre-cover-art" id="theatreCoverArt" src="/covers/ps2_default.jpg" alt="Capa do Jogo" />
+          </div>
+          <div class="theatre-game-info">
+            <h2 class="theatre-game-title" id="nowPlayingTitle">Nenhum Jogo em Execução</h2>
             <span class="now-playing-tier tier-leve" id="nowPlayingTier">Standby</span>
+            <div class="theatre-meta-badges">
+              <span id="playerResolutionBadge" class="tab-badge">1x Nativa</span>
+              <span id="playerFrameSkipBadge" class="tab-badge">Frame Skip: 0</span>
+            </div>
           </div>
-          <div class="player-telemetry">
-            <span id="playerResolutionBadge" class="tab-badge">1x Nativa</span>
-            <span id="playerFrameSkipBadge" class="tab-badge">Frame Skip: 0</span>
-            <span class="fps-counter" id="fpsDisplay">-- fps</span>
-            <button type="button" class="btn-ctrl" id="btnCloseTheatre" style="padding: 0.3rem 0.6rem;">✕ Fechar</button>
-          </div>
-        </div>
-
-        <div class="screen-canvas-wrap" id="canvasWrap">
-          <canvas id="outputCanvas" width="640" height="480" tabindex="0" aria-label="Tela do Jogo"></canvas>
-          <div class="canvas-overlay-message" id="canvasMessage">
-            <div class="standby-logo">🎮</div>
-            <h3 id="canvasStatusText">Pronto para Jogar</h3>
-            <p id="canvasSubText">Iniciando máquina virtual...</p>
-            <div id="standbyQuickActions" style="display:none;"></div>
-          </div>
-        </div>
-
-        <div class="player-controls-bar">
-          <div class="player-action-group">
+          <div class="theatre-cover-controls">
             <button type="button" class="btn-ctrl btn-accent" id="btnTogglePlay"><span>⏸</span> Pausar</button>
             <button type="button" class="btn-ctrl" id="btnResetGame"><span>🔄</span> Reiniciar</button>
-            <button type="button" class="btn-ctrl" id="btnToggleEcoMode"><span>⚡</span> Modo PC Fraco: <strong id="btnEcoStatus">Desativado</strong></button>
+            <button type="button" class="btn-ctrl" id="btnToggleEcoMode"><span>⚡</span> PC Fraco: <strong id="btnEcoStatus">Off</strong></button>
             <button type="button" class="btn-ctrl" id="btnWidescreenToggle"><span>📺</span> 4:3 / 16:9</button>
-          </div>
-          <div class="player-action-group">
             <button type="button" class="btn-ctrl" id="btnScreenshot"><span>📷</span> Foto</button>
-            <button type="button" class="btn-ctrl" id="btnFullscreen"><span>⛶</span> Tela Cheia</button>
             <button type="button" class="btn-ctrl" id="btnExitPlayer" style="border-color: rgba(239, 68, 68, 0.5);"><span>✕</span> Parar</button>
           </div>
-        </div>
+        </aside>
+
+        <!-- LADO DIREITO: PLAYER (CANVAS) -->
+        <main class="theatre-player-side">
+          <div class="player-topbar">
+            <div class="now-playing-info">
+              <span class="fps-counter" id="fpsDisplay">-- fps</span>
+              <span class="fullscreen-hint">Duplo clique = Tela Cheia</span>
+            </div>
+            <div class="player-telemetry">
+              <button type="button" class="btn-ctrl" id="btnFullscreen"><span>⛶</span> Tela Cheia</button>
+              <button type="button" class="btn-ctrl" id="btnCloseTheatre" style="padding: 0.3rem 0.6rem;">✕ Fechar</button>
+            </div>
+          </div>
+
+          <div class="screen-canvas-wrap" id="canvasWrap">
+            <canvas id="outputCanvas" width="640" height="480" tabindex="0" aria-label="Tela do Jogo"></canvas>
+            <div class="canvas-overlay-message" id="canvasMessage">
+              <div class="standby-logo">🎮</div>
+              <h3 id="canvasStatusText">Pronto para Jogar</h3>
+              <p id="canvasSubText">Iniciando máquina virtual...</p>
+              <div id="standbyQuickActions" style="display:none;"></div>
+            </div>
+          </div>
+        </main>
+
       </div>
     </div>
 
