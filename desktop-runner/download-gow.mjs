@@ -11,8 +11,24 @@ const targetIso = path.join(pspDir, 'God of War - Ghost of Sparta.iso');
 const partIso = path.join(pspDir, 'God of War - Ghost of Sparta.iso.part');
 const oldCso = path.join(pspDir, 'God of War - Ghost of Sparta (USA).cso');
 
-const GOW_URL = 'https://archive.org/download/god-of-war-ghost-of-sparta_202601/God%20of%20War%20Ghost%20of%20Sparta.iso';
-const EXPECTED_SIZE = 1251475456; // 1193.5 MB
+const GOW_URL = 'https://archive.org/download/god-of-war-ghost-of-sparta-europe-australia-en-fr-de-es-it_202608/God%20of%20War%20-%20Ghost%20of%20Sparta%20(Europe%2C%20Australia)%20(En%2CFr%2CDe%2CEs%2CIt).iso';
+const EXPECTED_SIZE = 1787232256; // 1704.4 MB (Authentic Sony PSP UMD ISO)
+
+function isAuthenticPspIso(filePath) {
+  try {
+    if (!fs.existsSync(filePath)) return false;
+    const stat = fs.statSync(filePath);
+    if (stat.size < 500 * 1024 * 1024) return false;
+    const fd = fs.openSync(filePath, 'r');
+    const buf = Buffer.alloc(2048);
+    fs.readSync(fd, buf, 0, 2048, 32768);
+    fs.closeSync(fd);
+    const systemId = buf.toString('latin1', 8, 40).trim();
+    return systemId === 'PSP GAME';
+  } catch {
+    return false;
+  }
+}
 
 function formatBytes(bytes) {
   return (bytes / (1024 * 1024)).toFixed(1) + ' MB';
@@ -40,19 +56,22 @@ async function startDownload() {
     fs.mkdirSync(pspDir, { recursive: true });
   }
 
-  // 1. Verificar se a ISO já está 100% pronta
+  // 1. Verificar se a ISO já está 100% pronta e válida (PSP GAME)
   if (fs.existsSync(targetIso)) {
-    const s = fs.statSync(targetIso);
-    if (s.size >= EXPECTED_SIZE - 1024 * 1024) {
-      console.log(`\n[PRONTO] God of War: Ghost of Sparta já está 100% baixado e pronto (${formatBytes(s.size)})!`);
+    if (isAuthenticPspIso(targetIso)) {
+      const s = fs.statSync(targetIso);
+      console.log(`\n[PRONTO] God of War: Ghost of Sparta já está 100% baixado e validado (${formatBytes(s.size)})!`);
       process.exit(0);
+    } else {
+      console.log('\n[AVISO] ISO existente identificada como inválida ou corrompida. Removendo para baixar a versão original...');
+      try { fs.unlinkSync(targetIso); } catch {}
     }
   }
 
   console.log('======================================================================');
   console.log('   RECUPERADOR AUTOMÁTICO DE DOWNLOAD: GOD OF WAR (PSP)');
   console.log('======================================================================');
-  console.log('Fonte: Internet Archive High-Speed Mirror (ISO Original 1.2 GB)');
+  console.log('Fonte: Internet Archive High-Speed Mirror (ISO Original PSP 1.7 GB)');
   console.log('Destino:', targetIso);
   console.log('----------------------------------------------------------------------\n');
 
