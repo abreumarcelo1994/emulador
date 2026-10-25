@@ -1,10 +1,10 @@
 @echo off
-title RetroStation Console — Configuração Inicial do Dispositivo
+title RetroStation Console - Configuracao Inicial do Dispositivo
 chcp 65001 >nul
 cd /d "%~dp0"
 
 echo ======================================================================
-echo   RETROSTATION CONSOLE — INSTALAÇÃO EM NOVO DISPOSITIVO
+echo   RETROSTATION CONSOLE - INSTALACAO EM NOVO DISPOSITIVO
 echo ======================================================================
 echo.
 
@@ -13,7 +13,6 @@ node -v >nul 2>&1
 if %ERRORLEVEL% NEQ 0 (
     echo [ERRO] Node.js nao encontrado neste computador!
     echo Baixe e instale o Node.js v20+ em: https://nodejs.org/
-    echo.
     pause
     exit /b 1
 )
@@ -48,3 +47,4 @@ echo.
 echo [3/3] Iniciando o Console Retro nativo...
 echo.
 call "%~dp0INICIAR_CONSOLE_RETRO.bat"
+exit /b 0
